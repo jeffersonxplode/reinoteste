@@ -24,7 +24,7 @@ module Reino
     config.active_record.raise_in_transactional_callbacks = true
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
     ActionMailer::Base.smtp_settings = {
-        :tls         => true,
+        :enable_starttls_auto: true,
         :address     => 'smtp.gmail.com',
         :domain      => 'gmail.com',
         :port        => 587,
