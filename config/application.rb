@@ -30,7 +30,7 @@ module Reino
         :port        => 587,
         :user_name   => "reinodetads@gmail.com",
         :password    => "geladeira123",
-        :authentication => 'login',
+        :authentication => 'plain',
         :enable_starttls_auto => true
 
     }
