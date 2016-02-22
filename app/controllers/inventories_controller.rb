@@ -5,8 +5,8 @@ class InventoriesController < ApplicationController
   # GET /inventories.json
   def index
     @inventories = Inventory.all
-    @inventory = Inventory.where(User_id: current_user).first
-    @character = Character.where(User_id: current_user).first
+    @inventory = Inventory.where(user_id: current_user).first
+    @character = Character.where(user_id: current_user).first
   end
 
   # GET /inventories/1
@@ -71,6 +71,6 @@ class InventoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def inventory_params
-      params.require(:inventory).permit(:User_id)
+      params.require(:inventory).permit(:user_id)
     end
 end

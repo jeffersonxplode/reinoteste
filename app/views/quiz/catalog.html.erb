@@ -18,12 +18,14 @@
 							  <br>
 							  <div class="col-md-2 col-sm-3 text-center">
 							    <a class="story-title" href="<%= quiz_index_path(:subject => lesson.subject, :url => lesson.url ) %>">
+								<% if(@done_lessons!=nil) %>
 								<% @done_lessons.each do |done_lesson| %>
-									<%if done_lesson.Lesson_id == lesson.id%>
+									<%if done_lesson.lesson_id == lesson.id%>
 										<% (1..done_lesson.score).each do %>
 											<span class="glyphicon glyphicon-star"></span>
 										<% end %>
 									<%end%>
+								<% end %>
 								<% end %>
 							    </a>
 							  </div>

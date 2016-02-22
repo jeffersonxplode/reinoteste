@@ -6,7 +6,7 @@ class LineBadgesController < ApplicationController
   # GET /line_badges
   # GET /line_badges.json
   def index
-    @line_badges = LineBadge.where(User_id: current_user)
+    @line_badges = LineBadge.where(user_id: current_user)
   end
 
   # GET /line_badges/1

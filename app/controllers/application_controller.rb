@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
 def getCharacter
 	if user_signed_in?
-		@characters = Character.where(User_id: current_user)
+		@characters = Character.where(user_id: current_user)
 		if @characters.size == 1
 			@character = @characters.first
 		end

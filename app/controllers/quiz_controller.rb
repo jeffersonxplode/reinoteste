@@ -3,19 +3,21 @@ class QuizController < ApplicationController
 
 
   def index
-    @characters = Character.where(User_id: current_user)
+    @characters = Character.where(user_id: current_user)
     if(@characters.size >= 1)
   	   @lesson = Lesson.new(lesson_params)
   	   @video = @lesson.url
-  	   @questions = Question.where(lesson: @lesson.subject).order("RAND()").limit(5)
+  	   @questions = Question.where(lesson: @lesson.subject).order("RANDOM()").limit(5)
     else
       redirect_to characters_url
     end
   end
 
   def catalog
-    @character = Character.where(User_id: current_user).first
-    @done_lessons = DoneLesson.where(character_id: @character.id)
+    if(@characters.size >= 1)
+      @character = Character.where(user_id: current_user).first
+      @done_lessons = DoneLesson.where(character_id: @character.id)
+    end
   end  
   
   def gerar_quiz
@@ -40,7 +42,7 @@ class QuizController < ApplicationController
     @question5 = Question.where(statement: @statement5).first
     @answers = [@answer1, @answer2, @answer3, @answer4, @answer5]
     @lesson = Lesson.where(subject: @question1.lesson).first
-    @character = Character.where(User_id: current_user).first
+    @character = Character.where(user_id: current_user).first
     @win = false
     @questions_answers = [@question1.a, @question2.a, @question3.a, @question4.a, @question5.a] 
     @result = 0
@@ -55,8 +57,8 @@ class QuizController < ApplicationController
 
     if @done_lesson == nil
       @done_lesson = DoneLesson.new
-      @done_lesson.Lesson_id = @lesson.id
-      @done_lesson.Character_id = @character.id
+      @done_lesson.lesson_id = @lesson.id
+      @done_lesson.character_id = @character.id
       @done_lesson.score = @result
       @done_lesson.save
       @xp_mult = @result * 10

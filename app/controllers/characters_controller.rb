@@ -3,15 +3,15 @@ class CharactersController < ApplicationController
   # GET /characters
   # GET /characters.json
   def index
-    @characters = Character.where(User_id: current_user)
-    @inventories = Inventory.where(User_id: current_user)
+    @characters = Character.where(user_id: current_user)
+    @inventories = Inventory.where(user_id: current_user)
   end
 
   def addItem
     item_name = params[:item_name]
     item_img = params[:item_img]
     item_part = params[:part]
-    @character = Character.where(User_id: current_user).first
+    @character = Character.where(user_id: current_user).first
     if item_part == "helmet"
       @character.helmet = item_img
     elsif item_part == "shield"
@@ -29,7 +29,7 @@ class CharactersController < ApplicationController
 
   def removeItem
     item_part = params[:part]
-    @character = Character.where(User_id: current_user).first
+    @character = Character.where(user_id: current_user).first
     if item_part == "helmet"
       @character.helmet = "none"
     elsif item_part == "shield"
@@ -52,7 +52,7 @@ class CharactersController < ApplicationController
 
   # GET /characters/new
   def new
-    @characters = Character.where(User_id: current_user)
+    @characters = Character.where(user_id: current_user)
     if(@characters.size >= 1)
       redirect_to characters_url
     else  
@@ -68,9 +68,9 @@ class CharactersController < ApplicationController
   # POST /characters.json
   def create
     @inventory = Inventory.new
-    @inventory.User_id = current_user.id
+    @inventory.user_id = current_user.id
     @character = Character.new(character_params)
-    @character.User_id = current_user.id
+    @character.user_id = current_user.id
     @character.level = 1
     @character.xp = 0
     @character.gold = 200
@@ -113,7 +113,7 @@ class CharactersController < ApplicationController
       done_lesson.destroy
     end  
     @character.destroy
-    @inventories = Inventory.where(User_id: current_user)
+    @inventories = Inventory.where(user_id: current_user)
     @inventories.each do |inventory|
       inventory.destroy
     end  
@@ -131,6 +131,6 @@ class CharactersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def character_params
-      params.require(:character).permit(:name, :xp, :gold, :hair, :skin, :shirt, :pants, :User_id)
+      params.require(:character).permit(:name, :xp, :gold, :hair, :skin, :shirt, :pants, :user_id)
     end
 end

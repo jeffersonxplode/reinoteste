@@ -23,7 +23,7 @@
     <% @users.each do |user| %>
     <% @chars.each do |character| %>
       <tr>
-        <% if user.id == character.User_id %>
+        <% if user.id == character.user_id %>
         	<td><%= user.name %></td>
        		<td><%= user.email %></td>
         	<td><%= character.correct%></td>

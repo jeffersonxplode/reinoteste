@@ -24,15 +24,15 @@ class LineItemsController < ApplicationController
   # POST /line_items
   # POST /line_items.json
   def create
-    @character = Character.where(User_id: current_user).first
-    @inventory = Inventory.where(User_id: current_user).first
+    @character = Character.where(user_id: current_user).first
+    @inventory = Inventory.where(user_id: current_user).first
     item = Item.find(params[:item_id])
     if item.price > @character.gold
       redirect_to store_index_path, notice: 'Voce não tem ouro suficiente'
     else  
       @line_item = LineItem.new
-      @line_item.Item = item
-      @line_item.Inventory = @inventory
+      @line_item.inventory = @inventory
+      @line_item.item = item
       @character.gold -= item.price
       @character.save
 
@@ -65,7 +65,7 @@ class LineItemsController < ApplicationController
   # DELETE /line_items/1
   # DELETE /line_items/1.json
   def destroy
-    @character.gold += @line_item.Item.price
+    @character.gold += @line_item.item.price
     @character.save
     @line_item.destroy
     respond_to do |format|
@@ -82,6 +82,6 @@ class LineItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def line_item_params
-      params.require(:line_item).permit(:Item_id, :Inventory_id)
+      params.require(:line_item).permit(:item_id, :inventory_id)
     end
 end

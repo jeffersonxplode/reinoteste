@@ -1,4 +1,4 @@
 class LineItem < ActiveRecord::Base
-  belongs_to :Item
-  belongs_to :Inventory
+  belongs_to :item
+  belongs_to :inventory
 end
