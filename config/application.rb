@@ -28,8 +28,8 @@ module Reino
         :address     => 'smtp.gmail.com',
         :domain      => 'mail.google.com',
         :port        => 587,
-        :user_name   =>"reinodocodigo@gmail.com",
-        :password    => "Reinotads20141",
+        :user_name   =>"reinodetads@gmail.com",
+        :password    => "geladeira123",
         :authentication => 'login',
         :enable_starttls_auto => true
 
