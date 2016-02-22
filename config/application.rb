@@ -36,6 +36,5 @@ module Reino
     }
 
 
-     config.serve_static_assets = true
   end
 end
