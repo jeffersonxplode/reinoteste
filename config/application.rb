@@ -28,9 +28,9 @@ module Reino
         :address     => 'smtp.gmail.com',
         :domain      => 'mail.google.com',
         :port        => 587,
-        :user_name   =>"reinodetads@gmail.com",
+        :user_name   => "reinodetads@gmail.com",
         :password    => "geladeira123",
-        :authentication => 'plain',
+        :authentication => 'login',
         :enable_starttls_auto => true
 
     }
