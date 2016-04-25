@@ -8,7 +8,7 @@ class CreateCharacters < ActiveRecord::Migration
       t.string :skin
       t.string :shirt
       t.string :pants
-      t.references :User, index: true, foreign_key: true
+      t.references :user, index: true, foreign_key: true
 
       t.timestamps null: false
     end
