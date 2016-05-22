@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151208221006) do
+ActiveRecord::Schema.define(version: 20160522190257) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "activities", force: :cascade do |t|
+    t.string   "lesson"
+    t.string   "statement"
+    t.string   "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "badges", force: :cascade do |t|
     t.string   "issuer_url",          limit: 255
@@ -58,6 +66,19 @@ ActiveRecord::Schema.define(version: 20151208221006) do
 
   add_index "done_lessons", ["character_id"], name: "index_done_lessons_on_character_id", using: :btree
   add_index "done_lessons", ["lesson_id"], name: "index_done_lessons_on_lesson_id", using: :btree
+
+  create_table "drag_drops", force: :cascade do |t|
+    t.string   "a"
+    t.string   "b"
+    t.string   "c"
+    t.string   "d"
+    t.string   "atitle"
+    t.string   "btitle"
+    t.string   "ctitle"
+    t.string   "dtitle"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "inventories", force: :cascade do |t|
     t.integer  "user_id"
@@ -104,6 +125,23 @@ ActiveRecord::Schema.define(version: 20151208221006) do
   add_index "line_items", ["inventory_id"], name: "index_line_items_on_inventory_id", using: :btree
   add_index "line_items", ["item_id"], name: "index_line_items_on_item_id", using: :btree
 
+  create_table "objective_images", force: :cascade do |t|
+    t.string   "aimg"
+    t.string   "bimg"
+    t.string   "cimg"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "objective_textuals", force: :cascade do |t|
+    t.string   "a"
+    t.string   "b"
+    t.string   "c"
+    t.string   "d"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "questions", force: :cascade do |t|
     t.string   "lesson",     limit: 255
     t.text     "statement"
@@ -113,6 +151,12 @@ ActiveRecord::Schema.define(version: 20151208221006) do
     t.string   "d",          limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "subjective_textuals", force: :cascade do |t|
+    t.text     "answer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

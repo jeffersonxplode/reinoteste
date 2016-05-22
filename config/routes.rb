@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   
   
 
+  resources :objective_images
+  resources :drag_drops
+  resources :subjective_textuals
+  resources :objective_textuals
   resources :line_badges do
     collection do 
       post :badge_wall_share
