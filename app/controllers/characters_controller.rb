@@ -9,7 +9,7 @@ class CharactersController < ApplicationController
 
   def addItem
     @character = Character.where(user_id: current_user).first
-    @character.add_item(params[:item_name], params[:item_img], params[:part])
+    @character.add_item(params[:name], params[:item_img], params[:part])
     if @character.save
     redirect_to :action => :index
     end
