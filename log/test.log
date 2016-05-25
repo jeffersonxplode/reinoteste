@@ -4584,3 +4584,157 @@ CharacterTest: test_should_save
   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "characters" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "jbull"], ["created_at", "2016-05-25 02:29:27.353230"], ["updated_at", "2016-05-25 02:29:27.353230"]]
   [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
   [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (15.5ms)[0m  ALTER TABLE "inventories" DISABLE TRIGGER ALL;ALTER TABLE "drag_drops" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "lessons" DISABLE TRIGGER ALL;ALTER TABLE "badges" DISABLE TRIGGER ALL;ALTER TABLE "objective_images" DISABLE TRIGGER ALL;ALTER TABLE "objective_textuals" DISABLE TRIGGER ALL;ALTER TABLE "questions" DISABLE TRIGGER ALL;ALTER TABLE "subjective_textuals" DISABLE TRIGGER ALL;ALTER TABLE "characters" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "done_lessons" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "line_badges" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "line_badges"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "line_badges" ("badge_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 02:35:44', '2016-05-25 02:35:44', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "line_badges" ("badge_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 02:35:44', '2016-05-25 02:35:44', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "done_lessons"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "done_lessons" ("lesson_id", "character_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 02:35:44', '2016-05-25 02:35:44', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "done_lessons" ("lesson_id", "character_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 02:35:44', '2016-05-25 02:35:44', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "lessons"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "lessons" ("url", "subject", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-05-25 02:35:44', '2016-05-25 02:35:44', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "lessons" ("url", "subject", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-05-25 02:35:44', '2016-05-25 02:35:44', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "subjective_textuals"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "subjective_textuals" ("lesson", "statement", "answer", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2016-05-25 02:35:44', '2016-05-25 02:35:44', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "subjective_textuals" ("lesson", "statement", "answer", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2016-05-25 02:35:44', '2016-05-25 02:35:44', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "items"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "items" ("name", "img", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2016-05-25 02:35:44', '2016-05-25 02:35:44', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "items" ("name", "img", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2016-05-25 02:35:44', '2016-05-25 02:35:44', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "line_items"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "line_items" ("item_id", "inventory_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 02:35:44', '2016-05-25 02:35:44', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "line_items" ("item_id", "inventory_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 02:35:44', '2016-05-25 02:35:44', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "objective_images"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "objective_images" ("lesson", "statement", "aimg", "bimg", "cimg", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 02:35:44', '2016-05-25 02:35:44', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "objective_images" ("lesson", "statement", "aimg", "bimg", "cimg", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 02:35:44', '2016-05-25 02:35:44', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "badges"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "badges" ("issuer_url", "issuer_organization", "name", "description", "img_url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 02:35:44', '2016-05-25 02:35:44', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "badges" ("issuer_url", "issuer_organization", "name", "description", "img_url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 02:35:44', '2016-05-25 02:35:44', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "questions"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "questions" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 02:35:44', '2016-05-25 02:35:44', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "questions" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 02:35:44', '2016-05-25 02:35:44', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "objective_textuals"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "objective_textuals" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 02:35:44', '2016-05-25 02:35:44', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "objective_textuals" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 02:35:44', '2016-05-25 02:35:44', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "characters"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "characters" ("name", "xp", "gold", "hair", "skin", "shirt", "pants", "created_at", "updated_at", "id") VALUES ('MyString', 1, 1, 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 02:35:44', '2016-05-25 02:35:44', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "characters" ("name", "xp", "gold", "hair", "skin", "shirt", "pants", "created_at", "updated_at", "id") VALUES ('MyString', 1, 1, 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 02:35:44', '2016-05-25 02:35:44', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "drag_drops"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "drag_drops" ("lesson", "statement", "a", "b", "c", "d", "atitle", "btitle", "ctitle", "dtitle", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 02:35:44', '2016-05-25 02:35:44', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "drag_drops" ("lesson", "statement", "a", "b", "c", "d", "atitle", "btitle", "ctitle", "dtitle", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 02:35:44', '2016-05-25 02:35:44', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('julian', 'julian@eu.com.br', '2016-05-25 02:35:44', '2016-05-25 02:35:44', 980190962)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "inventories"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "inventories" ("user_id", "created_at", "updated_at", "id") VALUES (1, '2016-05-25 02:35:44', '2016-05-25 02:35:44', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "inventories" ("user_id", "created_at", "updated_at", "id") VALUES (2, '2016-05-25 02:35:44', '2016-05-25 02:35:44', 298486374)
+  [1m[36m (9.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (9.8ms)[0m  ALTER TABLE "inventories" ENABLE TRIGGER ALL;ALTER TABLE "drag_drops" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "lessons" ENABLE TRIGGER ALL;ALTER TABLE "badges" ENABLE TRIGGER ALL;ALTER TABLE "objective_images" ENABLE TRIGGER ALL;ALTER TABLE "objective_textuals" ENABLE TRIGGER ALL;ALTER TABLE "questions" ENABLE TRIGGER ALL;ALTER TABLE "subjective_textuals" ENABLE TRIGGER ALL;ALTER TABLE "characters" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "done_lessons" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "line_badges" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+----------------------------------------------------------
+CharacterTest: test_should_not_save_character_without_name
+----------------------------------------------------------
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------------
+CharacterTest: test_should_remove_item
+--------------------------------------
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "characters" ("name", "shield", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "jbull"], ["shield", "none"], ["created_at", "2016-05-25 02:35:44.140384"], ["updated_at", "2016-05-25 02:35:44.140384"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------
+CharacterTest: test_should_add_item
+-----------------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "characters" ("name", "helmet", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "jbull"], ["helmet", "upg_helmet"], ["created_at", "2016-05-25 02:35:44.143824"], ["updated_at", "2016-05-25 02:35:44.143824"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------
+CharacterTest: test_should_save
+-------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "characters" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "jbull"], ["created_at", "2016-05-25 02:35:44.146614"], ["updated_at", "2016-05-25 02:35:44.146614"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (33.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (58.9ms)[0m  ALTER TABLE "inventories" DISABLE TRIGGER ALL;ALTER TABLE "drag_drops" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "lessons" DISABLE TRIGGER ALL;ALTER TABLE "badges" DISABLE TRIGGER ALL;ALTER TABLE "objective_images" DISABLE TRIGGER ALL;ALTER TABLE "objective_textuals" DISABLE TRIGGER ALL;ALTER TABLE "questions" DISABLE TRIGGER ALL;ALTER TABLE "subjective_textuals" DISABLE TRIGGER ALL;ALTER TABLE "characters" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "done_lessons" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "line_badges" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (42.1ms)[0m  DELETE FROM "line_badges"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "line_badges" ("badge_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 12:15:22', '2016-05-25 12:15:22', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "line_badges" ("badge_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 12:15:22', '2016-05-25 12:15:22', 298486374)
+  [1m[36mFixture Delete (27.5ms)[0m  [1mDELETE FROM "done_lessons"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "done_lessons" ("lesson_id", "character_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 12:15:22', '2016-05-25 12:15:22', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "done_lessons" ("lesson_id", "character_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 12:15:22', '2016-05-25 12:15:22', 298486374)[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "lessons"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "lessons" ("url", "subject", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-05-25 12:15:22', '2016-05-25 12:15:22', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "lessons" ("url", "subject", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-05-25 12:15:22', '2016-05-25 12:15:22', 298486374)
+  [1m[36mFixture Delete (4.5ms)[0m  [1mDELETE FROM "subjective_textuals"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "subjective_textuals" ("lesson", "statement", "answer", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2016-05-25 12:15:22', '2016-05-25 12:15:22', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "subjective_textuals" ("lesson", "statement", "answer", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2016-05-25 12:15:22', '2016-05-25 12:15:22', 298486374)[0m
+  [1m[35mFixture Delete (13.4ms)[0m  DELETE FROM "items"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "items" ("name", "img", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2016-05-25 12:15:22', '2016-05-25 12:15:22', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "items" ("name", "img", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2016-05-25 12:15:22', '2016-05-25 12:15:22', 298486374)
+  [1m[36mFixture Delete (10.8ms)[0m  [1mDELETE FROM "line_items"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "line_items" ("item_id", "inventory_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 12:15:22', '2016-05-25 12:15:22', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "line_items" ("item_id", "inventory_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 12:15:22', '2016-05-25 12:15:22', 298486374)[0m
+  [1m[35mFixture Delete (0.9ms)[0m  DELETE FROM "objective_images"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "objective_images" ("lesson", "statement", "aimg", "bimg", "cimg", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 12:15:22', '2016-05-25 12:15:22', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "objective_images" ("lesson", "statement", "aimg", "bimg", "cimg", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 12:15:22', '2016-05-25 12:15:22', 298486374)
+  [1m[36mFixture Delete (27.6ms)[0m  [1mDELETE FROM "badges"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "badges" ("issuer_url", "issuer_organization", "name", "description", "img_url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 12:15:22', '2016-05-25 12:15:22', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "badges" ("issuer_url", "issuer_organization", "name", "description", "img_url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 12:15:22', '2016-05-25 12:15:22', 298486374)[0m
+  [1m[35mFixture Delete (6.5ms)[0m  DELETE FROM "questions"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "questions" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 12:15:22', '2016-05-25 12:15:22', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "questions" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 12:15:22', '2016-05-25 12:15:22', 298486374)
+  [1m[36mFixture Delete (8.7ms)[0m  [1mDELETE FROM "objective_textuals"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "objective_textuals" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 12:15:22', '2016-05-25 12:15:22', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "objective_textuals" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 12:15:22', '2016-05-25 12:15:22', 298486374)[0m
+  [1m[35mFixture Delete (13.7ms)[0m  DELETE FROM "characters"
+  [1m[36mFixture Insert (9.4ms)[0m  [1mINSERT INTO "characters" ("name", "xp", "gold", "hair", "skin", "shirt", "pants", "created_at", "updated_at", "id") VALUES ('MyString', 1, 1, 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 12:15:22', '2016-05-25 12:15:22', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "characters" ("name", "xp", "gold", "hair", "skin", "shirt", "pants", "created_at", "updated_at", "id") VALUES ('MyString', 1, 1, 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 12:15:22', '2016-05-25 12:15:22', 298486374)
+  [1m[36mFixture Delete (0.9ms)[0m  [1mDELETE FROM "drag_drops"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "drag_drops" ("lesson", "statement", "a", "b", "c", "d", "atitle", "btitle", "ctitle", "dtitle", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 12:15:22', '2016-05-25 12:15:22', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "drag_drops" ("lesson", "statement", "a", "b", "c", "d", "atitle", "btitle", "ctitle", "dtitle", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 12:15:22', '2016-05-25 12:15:22', 298486374)[0m
+  [1m[35mFixture Delete (11.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (10.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('julian', 'julian@eu.com.br', '2016-05-25 12:15:22', '2016-05-25 12:15:22', 980190962)[0m
+  [1m[35mFixture Delete (11.4ms)[0m  DELETE FROM "inventories"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "inventories" ("user_id", "created_at", "updated_at", "id") VALUES (1, '2016-05-25 12:15:22', '2016-05-25 12:15:22', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "inventories" ("user_id", "created_at", "updated_at", "id") VALUES (2, '2016-05-25 12:15:22', '2016-05-25 12:15:22', 298486374)
+  [1m[36m (16.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (9.6ms)[0m  ALTER TABLE "inventories" ENABLE TRIGGER ALL;ALTER TABLE "drag_drops" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "lessons" ENABLE TRIGGER ALL;ALTER TABLE "badges" ENABLE TRIGGER ALL;ALTER TABLE "objective_images" ENABLE TRIGGER ALL;ALTER TABLE "objective_textuals" ENABLE TRIGGER ALL;ALTER TABLE "questions" ENABLE TRIGGER ALL;ALTER TABLE "subjective_textuals" ENABLE TRIGGER ALL;ALTER TABLE "characters" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "done_lessons" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "line_badges" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+-----------------------------------
+CharacterTest: test_should_add_item
+-----------------------------------
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "characters" ("name", "helmet", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "jbull"], ["helmet", "upg_helmet"], ["created_at", "2016-05-25 12:15:22.982926"], ["updated_at", "2016-05-25 12:15:22.982926"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------
+CharacterTest: test_should_remove_item
+--------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "characters" ("name", "shield", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "jbull"], ["shield", "none"], ["created_at", "2016-05-25 12:15:22.987098"], ["updated_at", "2016-05-25 12:15:22.987098"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------
+CharacterTest: test_should_save
+-------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "characters" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "jbull"], ["created_at", "2016-05-25 12:15:22.989858"], ["updated_at", "2016-05-25 12:15:22.989858"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------------
+CharacterTest: test_should_not_save_character_without_name
+----------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
