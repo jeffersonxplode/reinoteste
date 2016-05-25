@@ -1,6 +1,8 @@
 require 'test_helper'
+require 'devise'
 
 class CharactersControllerTest < ActionController::TestCase
+  include Devise::Test::ControllerHelpers
   setup do
     @character = characters(:one)
   end

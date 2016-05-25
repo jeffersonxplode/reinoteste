@@ -1,4 +1,5 @@
 require 'test_helper'
+include Devise::Test::ControllerHelpers
 
 class BadgesControllerTest < ActionController::TestCase
   setup do

@@ -8,43 +8,20 @@ class CharactersController < ApplicationController
   end
 
   def addItem
-    item_name = params[:item_name]
-    item_img = params[:item_img]
-    item_part = params[:part]
     @character = Character.where(user_id: current_user).first
-    if item_part == "helmet"
-      @character.helmet = item_img
-    elsif item_part == "shield"
-      @character.shield = item_img
-    elsif item_part == "weapon"
-      @character.weapon = item_img
-    elsif item_part == "armor"
-      @character.armor = item_img            
-    end  
-    
+    @character.add_item(params[:item_name], params[:item_img], params[:part])
     if @character.save
     redirect_to :action => :index
     end
   end
 
   def removeItem
-    item_part = params[:part]
     @character = Character.where(user_id: current_user).first
-    if item_part == "helmet"
-      @character.helmet = "none"
-    elsif item_part == "shield"
-      @character.shield = "none"
-    elsif item_part == "weapon"
-      @character.weapon = "none"
-    elsif item_part == "armor"
-      @character.armor = "none"            
-    end  
-
-
+    @character.remove_item(params[:part])
     if @character.save
     redirect_to :action => :index
     end
-  end  
+  end
   # GET /characters/1
   # GET /characters/1.json
   def show
@@ -55,9 +32,9 @@ class CharactersController < ApplicationController
     @characters = Character.where(user_id: current_user)
     if(@characters.size >= 1)
       redirect_to characters_url
-    else  
+    else
       @character = Character.new
-    end  
+    end
   end
 
   # GET /characters/1/edit
@@ -111,12 +88,12 @@ class CharactersController < ApplicationController
     @done_lessons = DoneLesson.where(character_id: @character.id)
     @done_lessons.each do |done_lesson|
       done_lesson.destroy
-    end  
+    end
     @character.destroy
     @inventories = Inventory.where(user_id: current_user)
     @inventories.each do |inventory|
       inventory.destroy
-    end  
+    end
     respond_to do |format|
       format.html { redirect_to characters_url, notice: 'Character was successfully destroyed.' }
       format.json { head :no_content }

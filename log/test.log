@@ -2063,3 +2063,2171 @@ DETAIL:  Key (email)=() already exists.
 CharacterTest: test_the_truth
 -----------------------------
   [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (12.3ms)[0m  ALTER TABLE "inventories" DISABLE TRIGGER ALL;ALTER TABLE "drag_drops" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "lessons" DISABLE TRIGGER ALL;ALTER TABLE "badges" DISABLE TRIGGER ALL;ALTER TABLE "objective_images" DISABLE TRIGGER ALL;ALTER TABLE "objective_textuals" DISABLE TRIGGER ALL;ALTER TABLE "questions" DISABLE TRIGGER ALL;ALTER TABLE "subjective_textuals" DISABLE TRIGGER ALL;ALTER TABLE "characters" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "done_lessons" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "line_badges" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "line_badges"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "line_badges" ("badge_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:40:34', '2016-05-25 00:40:34', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "line_badges" ("badge_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:40:34', '2016-05-25 00:40:34', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "done_lessons"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "done_lessons" ("lesson_id", "character_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:40:34', '2016-05-25 00:40:34', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "done_lessons" ("lesson_id", "character_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:40:34', '2016-05-25 00:40:34', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "lessons"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "lessons" ("url", "subject", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-05-25 00:40:34', '2016-05-25 00:40:34', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "lessons" ("url", "subject", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-05-25 00:40:34', '2016-05-25 00:40:34', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "subjective_textuals"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "subjective_textuals" ("lesson", "statement", "answer", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2016-05-25 00:40:34', '2016-05-25 00:40:34', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "subjective_textuals" ("lesson", "statement", "answer", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2016-05-25 00:40:34', '2016-05-25 00:40:34', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "items"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "items" ("name", "img", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2016-05-25 00:40:34', '2016-05-25 00:40:34', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "items" ("name", "img", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2016-05-25 00:40:34', '2016-05-25 00:40:34', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "line_items"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "line_items" ("item_id", "inventory_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:40:34', '2016-05-25 00:40:34', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "line_items" ("item_id", "inventory_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:40:34', '2016-05-25 00:40:34', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "objective_images"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "objective_images" ("lesson", "statement", "aimg", "bimg", "cimg", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:40:34', '2016-05-25 00:40:34', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "objective_images" ("lesson", "statement", "aimg", "bimg", "cimg", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:40:34', '2016-05-25 00:40:34', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "badges"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "badges" ("issuer_url", "issuer_organization", "name", "description", "img_url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:40:34', '2016-05-25 00:40:34', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "badges" ("issuer_url", "issuer_organization", "name", "description", "img_url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:40:34', '2016-05-25 00:40:34', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "questions"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "questions" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:40:34', '2016-05-25 00:40:34', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "questions" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:40:34', '2016-05-25 00:40:34', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "objective_textuals"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "objective_textuals" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:40:34', '2016-05-25 00:40:34', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "objective_textuals" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:40:34', '2016-05-25 00:40:34', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "characters"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "characters" ("name", "xp", "gold", "hair", "skin", "shirt", "pants", "created_at", "updated_at", "id") VALUES ('MyString', 1, 1, 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:40:34', '2016-05-25 00:40:34', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "characters" ("name", "xp", "gold", "hair", "skin", "shirt", "pants", "created_at", "updated_at", "id") VALUES ('MyString', 1, 1, 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:40:34', '2016-05-25 00:40:34', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "drag_drops"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "drag_drops" ("lesson", "statement", "a", "b", "c", "d", "atitle", "btitle", "ctitle", "dtitle", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:40:34', '2016-05-25 00:40:34', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "drag_drops" ("lesson", "statement", "a", "b", "c", "d", "atitle", "btitle", "ctitle", "dtitle", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:40:34', '2016-05-25 00:40:34', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "inventories"[0m
+  [1m[35mFixture Insert (0.9ms)[0m  INSERT INTO "inventories" ("user_id", "created_at", "updated_at", "id") VALUES (NULL, '2016-05-25 00:40:34', '2016-05-25 00:40:34', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "inventories" ("user_id", "created_at", "updated_at", "id") VALUES (NULL, '2016-05-25 00:40:34', '2016-05-25 00:40:34', 298486374)[0m
+  [1m[35m (2.7ms)[0m  COMMIT
+  [1m[36m (10.0ms)[0m  [1mALTER TABLE "inventories" ENABLE TRIGGER ALL;ALTER TABLE "drag_drops" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "lessons" ENABLE TRIGGER ALL;ALTER TABLE "badges" ENABLE TRIGGER ALL;ALTER TABLE "objective_images" ENABLE TRIGGER ALL;ALTER TABLE "objective_textuals" ENABLE TRIGGER ALL;ALTER TABLE "questions" ENABLE TRIGGER ALL;ALTER TABLE "subjective_textuals" ENABLE TRIGGER ALL;ALTER TABLE "characters" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "done_lessons" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "line_badges" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+----------------------------------------------------------
+DoneLessonsControllerTest: test_should_destroy_done_lesson
+----------------------------------------------------------
+  [1m[36mDoneLesson Load (0.3ms)[0m  [1mSELECT  "done_lessons".* FROM "done_lessons" WHERE "done_lessons"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "done_lessons"
+Processing by DoneLessonsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------
+DoneLessonsControllerTest: test_should_get_edit
+-----------------------------------------------
+  [1m[36mDoneLesson Load (0.3ms)[0m  [1mSELECT  "done_lessons".* FROM "done_lessons" WHERE "done_lessons"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by DoneLessonsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------
+DoneLessonsControllerTest: test_should_get_index
+------------------------------------------------
+  [1m[35mDoneLesson Load (0.3ms)[0m  SELECT  "done_lessons".* FROM "done_lessons" WHERE "done_lessons"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by DoneLessonsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+-------------------------------------------------------
+DoneLessonsControllerTest: test_should_show_done_lesson
+-------------------------------------------------------
+  [1m[36mDoneLesson Load (0.3ms)[0m  [1mSELECT  "done_lessons".* FROM "done_lessons" WHERE "done_lessons"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by DoneLessonsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------------------------
+DoneLessonsControllerTest: test_should_create_done_lesson
+---------------------------------------------------------
+  [1m[35mDoneLesson Load (0.3ms)[0m  SELECT  "done_lessons".* FROM "done_lessons" WHERE "done_lessons"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "done_lessons"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------
+DoneLessonsControllerTest: test_should_get_new
+----------------------------------------------
+  [1m[35mDoneLesson Load (0.2ms)[0m  SELECT  "done_lessons".* FROM "done_lessons" WHERE "done_lessons"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by DoneLessonsController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------------------------
+DoneLessonsControllerTest: test_should_update_done_lesson
+---------------------------------------------------------
+  [1m[36mDoneLesson Load (0.2ms)[0m  [1mSELECT  "done_lessons".* FROM "done_lessons" WHERE "done_lessons"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+CharactersControllerTest: test_should_create_character
+------------------------------------------------------
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "characters"[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------------
+CharactersControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[35mCharacter Load (0.4ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by CharactersController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------
+CharactersControllerTest: test_should_show_character
+----------------------------------------------------
+  [1m[36mCharacter Load (0.3ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------------------------
+CharactersControllerTest: test_should_destroy_character
+-------------------------------------------------------
+  [1m[35mCharacter Load (0.3ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "characters"[0m
+Processing by CharactersController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------------
+CharactersControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by CharactersController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------------
+CharactersControllerTest: test_should_update_character
+------------------------------------------------------
+  [1m[36mCharacter Load (0.4ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------
+CharactersControllerTest: test_should_get_edit
+----------------------------------------------
+  [1m[35mCharacter Load (0.4ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by CharactersController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------
+CharacterTest: test_the_truth
+-----------------------------
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------------
+LineItemsControllerTest: test_should_get_edit
+---------------------------------------------
+  [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by LineItemsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------------------
+LineItemsControllerTest: test_should_show_line_item
+---------------------------------------------------
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT  "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by LineItemsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------------
+LineItemsControllerTest: test_should_destroy_line_item
+------------------------------------------------------
+  [1m[36mLineItem Load (0.2ms)[0m  [1mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "line_items"
+Processing by LineItemsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------
+LineItemsControllerTest: test_should_get_index
+----------------------------------------------
+  [1m[36mLineItem Load (0.2ms)[0m  [1mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by LineItemsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------
+LineItemsControllerTest: test_should_create_line_item
+-----------------------------------------------------
+  [1m[35mLineItem Load (0.4ms)[0m  SELECT  "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "line_items"[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------
+LineItemsControllerTest: test_should_update_line_item
+-----------------------------------------------------
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT  "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------
+LineItemsControllerTest: test_should_get_new
+--------------------------------------------
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by LineItemsController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------
+QuizControllerTest: test_should_get_gerar_quiz
+----------------------------------------------
+Processing by QuizController#gerar_quiz as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------
+QuizControllerTest: test_should_get_index
+-----------------------------------------
+Processing by QuizController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------
+AdminControllerTest: test_should_get_index
+------------------------------------------
+Processing by AdminController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------
+MainControllerTest: test_should_get_index
+-----------------------------------------
+Processing by MainController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------------
+ItemsControllerTest: test_should_destroy_item
+---------------------------------------------
+  [1m[35mItem Load (0.2ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "items"[0m
+Processing by ItemsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------
+ItemsControllerTest: test_should_get_edit
+-----------------------------------------
+  [1m[35mItem Load (0.2ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------
+ItemsControllerTest: test_should_get_index
+------------------------------------------
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by ItemsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------------------
+ItemsControllerTest: test_should_update_item
+--------------------------------------------
+  [1m[35mItem Load (0.2ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by ItemsController#update as HTML
+  Parameters: {"item"=>{"img"=>"MyString", "name"=>"MyString", "price"=>"1"}, "id"=>"980190962"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------
+ItemsControllerTest: test_should_get_new
+----------------------------------------
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by ItemsController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------------------
+ItemsControllerTest: test_should_create_item
+--------------------------------------------
+  [1m[35mItem Load (0.2ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "items"[0m
+Processing by ItemsController#create as HTML
+  Parameters: {"item"=>{"img"=>"MyString", "name"=>"MyString", "price"=>"1"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------
+ItemsControllerTest: test_should_show_item
+------------------------------------------
+  [1m[35mItem Load (0.1ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------------
+DragDropsControllerTest: test_should_update_drag_drop
+-----------------------------------------------------
+  [1m[36mDragDrop Load (0.2ms)[0m  [1mSELECT  "drag_drops".* FROM "drag_drops" WHERE "drag_drops"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by DragDropsController#update as HTML
+  Parameters: {"drag_drop"=>{"a"=>"MyString", "atitle"=>"MyString", "b"=>"MyString", "btitle"=>"MyString", "c"=>"MyString", "ctitle"=>"MyString", "d"=>"MyString", "dtitle"=>"MyString", "lesson"=>"MyString", "statement"=>"MyString"}, "id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------------------
+DragDropsControllerTest: test_should_get_new
+--------------------------------------------
+  [1m[35mDragDrop Load (0.3ms)[0m  SELECT  "drag_drops".* FROM "drag_drops" WHERE "drag_drops"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by DragDropsController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------------
+DragDropsControllerTest: test_should_create_drag_drop
+-----------------------------------------------------
+  [1m[36mDragDrop Load (0.2ms)[0m  [1mSELECT  "drag_drops".* FROM "drag_drops" WHERE "drag_drops"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "drag_drops"
+Processing by DragDropsController#create as HTML
+  Parameters: {"drag_drop"=>{"a"=>"MyString", "atitle"=>"MyString", "b"=>"MyString", "btitle"=>"MyString", "c"=>"MyString", "ctitle"=>"MyString", "d"=>"MyString", "dtitle"=>"MyString", "lesson"=>"MyString", "statement"=>"MyString"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------------
+DragDropsControllerTest: test_should_get_edit
+---------------------------------------------
+  [1m[36mDragDrop Load (0.2ms)[0m  [1mSELECT  "drag_drops".* FROM "drag_drops" WHERE "drag_drops"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by DragDropsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------
+DragDropsControllerTest: test_should_get_index
+----------------------------------------------
+  [1m[35mDragDrop Load (0.2ms)[0m  SELECT  "drag_drops".* FROM "drag_drops" WHERE "drag_drops"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by DragDropsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------------------
+DragDropsControllerTest: test_should_show_drag_drop
+---------------------------------------------------
+  [1m[36mDragDrop Load (0.2ms)[0m  [1mSELECT  "drag_drops".* FROM "drag_drops" WHERE "drag_drops"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by DragDropsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+DragDropsControllerTest: test_should_destroy_drag_drop
+------------------------------------------------------
+  [1m[35mDragDrop Load (0.2ms)[0m  SELECT  "drag_drops".* FROM "drag_drops" WHERE "drag_drops"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "drag_drops"[0m
+Processing by DragDropsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------------------
+LessonsControllerTest: test_should_get_index
+--------------------------------------------
+  [1m[35mLesson Load (0.2ms)[0m  SELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by LessonsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+----------------------------------------------
+LessonsControllerTest: test_should_show_lesson
+----------------------------------------------
+  [1m[36mLesson Load (0.3ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------------------
+LessonsControllerTest: test_should_destroy_lesson
+-------------------------------------------------
+  [1m[35mLesson Load (0.3ms)[0m  SELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "lessons"[0m
+Processing by LessonsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------
+LessonsControllerTest: test_should_get_new
+------------------------------------------
+  [1m[35mLesson Load (0.3ms)[0m  SELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by LessonsController#new as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+LessonsControllerTest: test_should_create_lesson
+------------------------------------------------
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "lessons"
+Processing by LessonsController#create as HTML
+  Parameters: {"lesson"=>{"subject"=>"MyString", "url"=>"MyString"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+LessonsControllerTest: test_should_update_lesson
+------------------------------------------------
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by LessonsController#update as HTML
+  Parameters: {"lesson"=>{"subject"=>"MyString", "url"=>"MyString"}, "id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------------
+LessonsControllerTest: test_should_get_edit
+-------------------------------------------
+  [1m[35mLesson Load (0.1ms)[0m  SELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by LessonsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------
+StoreControllerTest: test_should_get_index
+------------------------------------------
+Processing by StoreController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------------------------
+ObjectiveImagesControllerTest: test_should_destroy_objective_image
+------------------------------------------------------------------
+  [1m[36mObjectiveImage Load (0.2ms)[0m  [1mSELECT  "objective_images".* FROM "objective_images" WHERE "objective_images"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "objective_images"
+Processing by ObjectiveImagesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------------
+ObjectiveImagesControllerTest: test_should_get_new
+--------------------------------------------------
+  [1m[36mObjectiveImage Load (0.3ms)[0m  [1mSELECT  "objective_images".* FROM "objective_images" WHERE "objective_images"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by ObjectiveImagesController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------
+ObjectiveImagesControllerTest: test_should_create_objective_image
+-----------------------------------------------------------------
+  [1m[35mObjectiveImage Load (0.2ms)[0m  SELECT  "objective_images".* FROM "objective_images" WHERE "objective_images"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "objective_images"[0m
+Processing by ObjectiveImagesController#create as HTML
+  Parameters: {"objective_image"=>{"aimg"=>"MyString", "bimg"=>"MyString", "cimg"=>"MyString", "lesson"=>"MyString", "statement"=>"MyString"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+ObjectiveImagesControllerTest: test_should_get_index
+----------------------------------------------------
+  [1m[35mObjectiveImage Load (0.2ms)[0m  SELECT  "objective_images".* FROM "objective_images" WHERE "objective_images"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by ObjectiveImagesController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------------------------------
+ObjectiveImagesControllerTest: test_should_show_objective_image
+---------------------------------------------------------------
+  [1m[36mObjectiveImage Load (0.2ms)[0m  [1mSELECT  "objective_images".* FROM "objective_images" WHERE "objective_images"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by ObjectiveImagesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------
+ObjectiveImagesControllerTest: test_should_update_objective_image
+-----------------------------------------------------------------
+  [1m[35mObjectiveImage Load (0.7ms)[0m  SELECT  "objective_images".* FROM "objective_images" WHERE "objective_images"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by ObjectiveImagesController#update as HTML
+  Parameters: {"objective_image"=>{"aimg"=>"MyString", "bimg"=>"MyString", "cimg"=>"MyString", "lesson"=>"MyString", "statement"=>"MyString"}, "id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------------------
+ObjectiveImagesControllerTest: test_should_get_edit
+---------------------------------------------------
+  [1m[36mObjectiveImage Load (0.1ms)[0m  [1mSELECT  "objective_images".* FROM "objective_images" WHERE "objective_images"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by ObjectiveImagesController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------------
+SubjectiveTextualsControllerTest: test_should_create_subjective_textual
+-----------------------------------------------------------------------
+  [1m[35mSubjectiveTextual Load (0.2ms)[0m  SELECT  "subjective_textuals".* FROM "subjective_textuals" WHERE "subjective_textuals"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "subjective_textuals"[0m
+Processing by SubjectiveTextualsController#create as HTML
+  Parameters: {"subjective_textual"=>{"answer"=>"MyText", "lesson"=>"MyString", "statement"=>"MyString"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+SubjectiveTextualsControllerTest: test_should_get_edit
+------------------------------------------------------
+  [1m[35mSubjectiveTextual Load (0.3ms)[0m  SELECT  "subjective_textuals".* FROM "subjective_textuals" WHERE "subjective_textuals"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by SubjectiveTextualsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------------------------------
+SubjectiveTextualsControllerTest: test_should_update_subjective_textual
+-----------------------------------------------------------------------
+  [1m[36mSubjectiveTextual Load (0.3ms)[0m  [1mSELECT  "subjective_textuals".* FROM "subjective_textuals" WHERE "subjective_textuals"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by SubjectiveTextualsController#update as HTML
+  Parameters: {"subjective_textual"=>{"answer"=>"MyText", "lesson"=>"MyString", "statement"=>"MyString"}, "id"=>"980190962"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------
+SubjectiveTextualsControllerTest: test_should_get_new
+-----------------------------------------------------
+  [1m[35mSubjectiveTextual Load (0.2ms)[0m  SELECT  "subjective_textuals".* FROM "subjective_textuals" WHERE "subjective_textuals"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by SubjectiveTextualsController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------------------------------------
+SubjectiveTextualsControllerTest: test_should_show_subjective_textual
+---------------------------------------------------------------------
+  [1m[36mSubjectiveTextual Load (0.2ms)[0m  [1mSELECT  "subjective_textuals".* FROM "subjective_textuals" WHERE "subjective_textuals"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by SubjectiveTextualsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------------------------------
+SubjectiveTextualsControllerTest: test_should_destroy_subjective_textual
+------------------------------------------------------------------------
+  [1m[35mSubjectiveTextual Load (0.2ms)[0m  SELECT  "subjective_textuals".* FROM "subjective_textuals" WHERE "subjective_textuals"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subjective_textuals"[0m
+Processing by SubjectiveTextualsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------------------------
+SubjectiveTextualsControllerTest: test_should_get_index
+-------------------------------------------------------
+  [1m[35mSubjectiveTextual Load (0.2ms)[0m  SELECT  "subjective_textuals".* FROM "subjective_textuals" WHERE "subjective_textuals"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by SubjectiveTextualsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------
+BadgesControllerTest: test_should_destroy_badge
+-----------------------------------------------
+  [1m[36mBadge Load (0.3ms)[0m  [1mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "badges"
+Processing by BadgesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------
+BadgesControllerTest: test_should_get_edit
+------------------------------------------
+  [1m[36mBadge Load (0.3ms)[0m  [1mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by BadgesController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------
+BadgesControllerTest: test_should_create_badge
+----------------------------------------------
+  [1m[35mBadge Load (0.2ms)[0m  SELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "badges"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------
+BadgesControllerTest: test_should_update_badge
+----------------------------------------------
+  [1m[35mBadge Load (0.2ms)[0m  SELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------------
+BadgesControllerTest: test_should_get_index
+-------------------------------------------
+  [1m[36mBadge Load (0.2ms)[0m  [1mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by BadgesController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------
+BadgesControllerTest: test_should_get_new
+-----------------------------------------
+  [1m[35mBadge Load (0.2ms)[0m  SELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by BadgesController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+--------------------------------------------
+BadgesControllerTest: test_should_show_badge
+--------------------------------------------
+  [1m[36mBadge Load (0.3ms)[0m  [1mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by BadgesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------
+LineBadgesControllerTest: test_should_get_edit
+----------------------------------------------
+  [1m[35mLineBadge Load (0.3ms)[0m  SELECT  "line_badges".* FROM "line_badges" WHERE "line_badges"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by LineBadgesController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------------------------
+LineBadgesControllerTest: test_should_update_line_badge
+-------------------------------------------------------
+  [1m[36mLineBadge Load (0.2ms)[0m  [1mSELECT  "line_badges".* FROM "line_badges" WHERE "line_badges"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by LineBadgesController#update as HTML
+  Parameters: {"line_badge"=>{"badge_id"=>nil, "user_id"=>nil}, "id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------------------------------
+LineBadgesControllerTest: test_should_destroy_line_badge
+--------------------------------------------------------
+  [1m[35mLineBadge Load (0.2ms)[0m  SELECT  "line_badges".* FROM "line_badges" WHERE "line_badges"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "line_badges"[0m
+Processing by LineBadgesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------------
+LineBadgesControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[35mLineBadge Load (0.3ms)[0m  SELECT  "line_badges".* FROM "line_badges" WHERE "line_badges"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by LineBadgesController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------------
+LineBadgesControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[36mLineBadge Load (0.3ms)[0m  [1mSELECT  "line_badges".* FROM "line_badges" WHERE "line_badges"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by LineBadgesController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------------------------
+LineBadgesControllerTest: test_should_create_line_badge
+-------------------------------------------------------
+  [1m[35mLineBadge Load (0.3ms)[0m  SELECT  "line_badges".* FROM "line_badges" WHERE "line_badges"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "line_badges"[0m
+Processing by LineBadgesController#create as HTML
+  Parameters: {"line_badge"=>{"badge_id"=>nil, "user_id"=>nil}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------
+LineBadgesControllerTest: test_should_show_line_badge
+-----------------------------------------------------
+  [1m[35mLineBadge Load (0.2ms)[0m  SELECT  "line_badges".* FROM "line_badges" WHERE "line_badges"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by LineBadgesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------------
+ObjectiveTextualsControllerTest: test_should_get_edit
+-----------------------------------------------------
+  [1m[36mObjectiveTextual Load (0.3ms)[0m  [1mSELECT  "objective_textuals".* FROM "objective_textuals" WHERE "objective_textuals"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by ObjectiveTextualsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------------------------------------
+ObjectiveTextualsControllerTest: test_should_update_objective_textual
+---------------------------------------------------------------------
+  [1m[35mObjectiveTextual Load (0.3ms)[0m  SELECT  "objective_textuals".* FROM "objective_textuals" WHERE "objective_textuals"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by ObjectiveTextualsController#update as HTML
+  Parameters: {"objective_textual"=>{"a"=>"MyString", "b"=>"MyString", "c"=>"MyString", "d"=>"MyString", "lesson"=>"MyString", "statement"=>"MyString"}, "id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------------------------
+ObjectiveTextualsControllerTest: test_should_destroy_objective_textual
+----------------------------------------------------------------------
+  [1m[36mObjectiveTextual Load (0.2ms)[0m  [1mSELECT  "objective_textuals".* FROM "objective_textuals" WHERE "objective_textuals"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "objective_textuals"
+Processing by ObjectiveTextualsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+----------------------------------------------------
+ObjectiveTextualsControllerTest: test_should_get_new
+----------------------------------------------------
+  [1m[36mObjectiveTextual Load (0.2ms)[0m  [1mSELECT  "objective_textuals".* FROM "objective_textuals" WHERE "objective_textuals"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by ObjectiveTextualsController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------------------------------------
+ObjectiveTextualsControllerTest: test_should_create_objective_textual
+---------------------------------------------------------------------
+  [1m[35mObjectiveTextual Load (0.3ms)[0m  SELECT  "objective_textuals".* FROM "objective_textuals" WHERE "objective_textuals"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "objective_textuals"[0m
+Processing by ObjectiveTextualsController#create as HTML
+  Parameters: {"objective_textual"=>{"a"=>"MyString", "b"=>"MyString", "c"=>"MyString", "d"=>"MyString", "lesson"=>"MyString", "statement"=>"MyString"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+ObjectiveTextualsControllerTest: test_should_get_index
+------------------------------------------------------
+  [1m[35mObjectiveTextual Load (0.2ms)[0m  SELECT  "objective_textuals".* FROM "objective_textuals" WHERE "objective_textuals"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by ObjectiveTextualsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------------------------------------
+ObjectiveTextualsControllerTest: test_should_show_objective_textual
+-------------------------------------------------------------------
+  [1m[36mObjectiveTextual Load (0.4ms)[0m  [1mSELECT  "objective_textuals".* FROM "objective_textuals" WHERE "objective_textuals"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by ObjectiveTextualsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+QuestionsControllerTest: test_should_update_question
+----------------------------------------------------
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by QuestionsController#update as HTML
+  Parameters: {"question"=>{"a"=>"MyString", "b"=>"MyString", "c"=>"MyString", "d"=>"MyString", "lesson"=>"MyString", "statement"=>"MyText"}, "id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------
+QuestionsControllerTest: test_should_create_question
+----------------------------------------------------
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "questions"
+Processing by QuestionsController#create as HTML
+  Parameters: {"question"=>{"a"=>"MyString", "b"=>"MyString", "c"=>"MyString", "d"=>"MyString", "lesson"=>"MyString", "statement"=>"MyText"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------------
+QuestionsControllerTest: test_should_destroy_question
+-----------------------------------------------------
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "questions"
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------
+QuestionsControllerTest: test_should_get_new
+--------------------------------------------
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by QuestionsController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------------------------
+QuestionsControllerTest: test_should_show_question
+--------------------------------------------------
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------
+QuestionsControllerTest: test_should_get_index
+----------------------------------------------
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by QuestionsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------------
+QuestionsControllerTest: test_should_get_edit
+---------------------------------------------
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------------------
+InventoriesControllerTest: test_should_destroy_inventory
+--------------------------------------------------------
+  [1m[36mInventory Load (0.2ms)[0m  [1mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "inventories"
+Processing by InventoriesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------------
+InventoriesControllerTest: test_should_show_inventory
+-----------------------------------------------------
+  [1m[36mInventory Load (0.2ms)[0m  [1mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by InventoriesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------------------------
+InventoriesControllerTest: test_should_update_inventory
+-------------------------------------------------------
+  [1m[35mInventory Load (0.2ms)[0m  SELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------------------------
+InventoriesControllerTest: test_should_create_inventory
+-------------------------------------------------------
+  [1m[36mInventory Load (0.2ms)[0m  [1mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "inventories"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------
+InventoriesControllerTest: test_should_get_edit
+-----------------------------------------------
+  [1m[36mInventory Load (0.2ms)[0m  [1mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by InventoriesController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------
+InventoriesControllerTest: test_should_get_index
+------------------------------------------------
+  [1m[35mInventory Load (0.2ms)[0m  SELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by InventoriesController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------
+InventoriesControllerTest: test_should_get_new
+----------------------------------------------
+  [1m[36mInventory Load (0.2ms)[0m  [1mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by InventoriesController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (22.4ms)[0m  ALTER TABLE "inventories" DISABLE TRIGGER ALL;ALTER TABLE "drag_drops" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "lessons" DISABLE TRIGGER ALL;ALTER TABLE "badges" DISABLE TRIGGER ALL;ALTER TABLE "objective_images" DISABLE TRIGGER ALL;ALTER TABLE "objective_textuals" DISABLE TRIGGER ALL;ALTER TABLE "questions" DISABLE TRIGGER ALL;ALTER TABLE "subjective_textuals" DISABLE TRIGGER ALL;ALTER TABLE "characters" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "done_lessons" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "line_badges" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "line_badges"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "line_badges" ("badge_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:40:53', '2016-05-25 00:40:53', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "line_badges" ("badge_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:40:53', '2016-05-25 00:40:53', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "done_lessons"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "done_lessons" ("lesson_id", "character_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:40:53', '2016-05-25 00:40:53', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "done_lessons" ("lesson_id", "character_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:40:53', '2016-05-25 00:40:53', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "lessons"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "lessons" ("url", "subject", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-05-25 00:40:53', '2016-05-25 00:40:53', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "lessons" ("url", "subject", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-05-25 00:40:53', '2016-05-25 00:40:53', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "subjective_textuals"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "subjective_textuals" ("lesson", "statement", "answer", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2016-05-25 00:40:53', '2016-05-25 00:40:53', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "subjective_textuals" ("lesson", "statement", "answer", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2016-05-25 00:40:53', '2016-05-25 00:40:53', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "items"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "items" ("name", "img", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2016-05-25 00:40:53', '2016-05-25 00:40:53', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "items" ("name", "img", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2016-05-25 00:40:53', '2016-05-25 00:40:53', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "line_items"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "line_items" ("item_id", "inventory_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:40:53', '2016-05-25 00:40:53', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "line_items" ("item_id", "inventory_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:40:53', '2016-05-25 00:40:53', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "objective_images"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "objective_images" ("lesson", "statement", "aimg", "bimg", "cimg", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:40:53', '2016-05-25 00:40:53', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "objective_images" ("lesson", "statement", "aimg", "bimg", "cimg", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:40:53', '2016-05-25 00:40:53', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "badges"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "badges" ("issuer_url", "issuer_organization", "name", "description", "img_url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:40:53', '2016-05-25 00:40:53', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "badges" ("issuer_url", "issuer_organization", "name", "description", "img_url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:40:53', '2016-05-25 00:40:53', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "questions"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "questions" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:40:53', '2016-05-25 00:40:53', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "questions" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:40:53', '2016-05-25 00:40:53', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "objective_textuals"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "objective_textuals" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:40:53', '2016-05-25 00:40:53', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "objective_textuals" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:40:53', '2016-05-25 00:40:53', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "characters"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "characters" ("name", "xp", "gold", "hair", "skin", "shirt", "pants", "created_at", "updated_at", "id") VALUES ('MyString', 1, 1, 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:40:53', '2016-05-25 00:40:53', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "characters" ("name", "xp", "gold", "hair", "skin", "shirt", "pants", "created_at", "updated_at", "id") VALUES ('MyString', 1, 1, 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:40:53', '2016-05-25 00:40:53', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "drag_drops"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "drag_drops" ("lesson", "statement", "a", "b", "c", "d", "atitle", "btitle", "ctitle", "dtitle", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:40:53', '2016-05-25 00:40:53', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "drag_drops" ("lesson", "statement", "a", "b", "c", "d", "atitle", "btitle", "ctitle", "dtitle", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:40:53', '2016-05-25 00:40:53', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "inventories"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "inventories" ("user_id", "created_at", "updated_at", "id") VALUES (NULL, '2016-05-25 00:40:53', '2016-05-25 00:40:53', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "inventories" ("user_id", "created_at", "updated_at", "id") VALUES (NULL, '2016-05-25 00:40:53', '2016-05-25 00:40:53', 298486374)[0m
+  [1m[35m (9.2ms)[0m  COMMIT
+  [1m[36m (9.4ms)[0m  [1mALTER TABLE "inventories" ENABLE TRIGGER ALL;ALTER TABLE "drag_drops" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "lessons" ENABLE TRIGGER ALL;ALTER TABLE "badges" ENABLE TRIGGER ALL;ALTER TABLE "objective_images" ENABLE TRIGGER ALL;ALTER TABLE "objective_textuals" ENABLE TRIGGER ALL;ALTER TABLE "questions" ENABLE TRIGGER ALL;ALTER TABLE "subjective_textuals" ENABLE TRIGGER ALL;ALTER TABLE "characters" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "done_lessons" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "line_badges" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-----------------------------
+CharacterTest: test_the_truth
+-----------------------------
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (18.0ms)[0m  ALTER TABLE "inventories" DISABLE TRIGGER ALL;ALTER TABLE "drag_drops" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "lessons" DISABLE TRIGGER ALL;ALTER TABLE "badges" DISABLE TRIGGER ALL;ALTER TABLE "objective_images" DISABLE TRIGGER ALL;ALTER TABLE "objective_textuals" DISABLE TRIGGER ALL;ALTER TABLE "questions" DISABLE TRIGGER ALL;ALTER TABLE "subjective_textuals" DISABLE TRIGGER ALL;ALTER TABLE "characters" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "done_lessons" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "line_badges" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "line_badges"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "line_badges" ("badge_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:43:30', '2016-05-25 00:43:30', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "line_badges" ("badge_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:43:30', '2016-05-25 00:43:30', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "done_lessons"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "done_lessons" ("lesson_id", "character_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:43:30', '2016-05-25 00:43:30', 980190962)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "done_lessons" ("lesson_id", "character_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:43:30', '2016-05-25 00:43:30', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "lessons"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "lessons" ("url", "subject", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-05-25 00:43:30', '2016-05-25 00:43:30', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "lessons" ("url", "subject", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-05-25 00:43:30', '2016-05-25 00:43:30', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "subjective_textuals"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "subjective_textuals" ("lesson", "statement", "answer", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2016-05-25 00:43:30', '2016-05-25 00:43:30', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "subjective_textuals" ("lesson", "statement", "answer", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2016-05-25 00:43:30', '2016-05-25 00:43:30', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "items"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "items" ("name", "img", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2016-05-25 00:43:30', '2016-05-25 00:43:30', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "items" ("name", "img", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2016-05-25 00:43:30', '2016-05-25 00:43:30', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "line_items"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "line_items" ("item_id", "inventory_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:43:30', '2016-05-25 00:43:30', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "line_items" ("item_id", "inventory_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:43:30', '2016-05-25 00:43:30', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "objective_images"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "objective_images" ("lesson", "statement", "aimg", "bimg", "cimg", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:30', '2016-05-25 00:43:30', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "objective_images" ("lesson", "statement", "aimg", "bimg", "cimg", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:30', '2016-05-25 00:43:30', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "badges"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "badges" ("issuer_url", "issuer_organization", "name", "description", "img_url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:30', '2016-05-25 00:43:30', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "badges" ("issuer_url", "issuer_organization", "name", "description", "img_url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:30', '2016-05-25 00:43:30', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "questions"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "questions" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:30', '2016-05-25 00:43:30', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "questions" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:30', '2016-05-25 00:43:30', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "objective_textuals"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "objective_textuals" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:30', '2016-05-25 00:43:30', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "objective_textuals" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:30', '2016-05-25 00:43:30', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "characters"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "characters" ("name", "xp", "gold", "hair", "skin", "shirt", "pants", "created_at", "updated_at", "id") VALUES ('MyString', 1, 1, 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:31', '2016-05-25 00:43:31', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "characters" ("name", "xp", "gold", "hair", "skin", "shirt", "pants", "created_at", "updated_at", "id") VALUES ('MyString', 1, 1, 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:31', '2016-05-25 00:43:31', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "drag_drops"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "drag_drops" ("lesson", "statement", "a", "b", "c", "d", "atitle", "btitle", "ctitle", "dtitle", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:31', '2016-05-25 00:43:31', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "drag_drops" ("lesson", "statement", "a", "b", "c", "d", "atitle", "btitle", "ctitle", "dtitle", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:31', '2016-05-25 00:43:31', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('julian', 'julian@eu.com.br', '2016-05-25 00:43:31', '2016-05-25 00:43:31', 980190962)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "inventories"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "inventories" ("user_id", "created_at", "updated_at", "id") VALUES (1, '2016-05-25 00:43:31', '2016-05-25 00:43:31', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "inventories" ("user_id", "created_at", "updated_at", "id") VALUES (2, '2016-05-25 00:43:31', '2016-05-25 00:43:31', 298486374)
+  [1m[36m (6.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (10.1ms)[0m  ALTER TABLE "inventories" ENABLE TRIGGER ALL;ALTER TABLE "drag_drops" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "lessons" ENABLE TRIGGER ALL;ALTER TABLE "badges" ENABLE TRIGGER ALL;ALTER TABLE "objective_images" ENABLE TRIGGER ALL;ALTER TABLE "objective_textuals" ENABLE TRIGGER ALL;ALTER TABLE "questions" ENABLE TRIGGER ALL;ALTER TABLE "subjective_textuals" ENABLE TRIGGER ALL;ALTER TABLE "characters" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "done_lessons" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "line_badges" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+-----------------------------
+CharacterTest: test_the_truth
+-----------------------------
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (28.4ms)[0m  ALTER TABLE "inventories" DISABLE TRIGGER ALL;ALTER TABLE "drag_drops" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "lessons" DISABLE TRIGGER ALL;ALTER TABLE "badges" DISABLE TRIGGER ALL;ALTER TABLE "objective_images" DISABLE TRIGGER ALL;ALTER TABLE "objective_textuals" DISABLE TRIGGER ALL;ALTER TABLE "questions" DISABLE TRIGGER ALL;ALTER TABLE "subjective_textuals" DISABLE TRIGGER ALL;ALTER TABLE "characters" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "done_lessons" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "line_badges" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "line_badges"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "line_badges" ("badge_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:43:39', '2016-05-25 00:43:39', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "line_badges" ("badge_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:43:39', '2016-05-25 00:43:39', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "done_lessons"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "done_lessons" ("lesson_id", "character_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:43:39', '2016-05-25 00:43:39', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "done_lessons" ("lesson_id", "character_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:43:39', '2016-05-25 00:43:39', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "lessons"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "lessons" ("url", "subject", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-05-25 00:43:39', '2016-05-25 00:43:39', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "lessons" ("url", "subject", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-05-25 00:43:39', '2016-05-25 00:43:39', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "subjective_textuals"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "subjective_textuals" ("lesson", "statement", "answer", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2016-05-25 00:43:39', '2016-05-25 00:43:39', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "subjective_textuals" ("lesson", "statement", "answer", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2016-05-25 00:43:39', '2016-05-25 00:43:39', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "items"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "items" ("name", "img", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2016-05-25 00:43:40', '2016-05-25 00:43:40', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "items" ("name", "img", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2016-05-25 00:43:40', '2016-05-25 00:43:40', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "line_items"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "line_items" ("item_id", "inventory_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:43:40', '2016-05-25 00:43:40', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "line_items" ("item_id", "inventory_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:43:40', '2016-05-25 00:43:40', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "objective_images"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "objective_images" ("lesson", "statement", "aimg", "bimg", "cimg", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:40', '2016-05-25 00:43:40', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "objective_images" ("lesson", "statement", "aimg", "bimg", "cimg", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:40', '2016-05-25 00:43:40', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "badges"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "badges" ("issuer_url", "issuer_organization", "name", "description", "img_url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:40', '2016-05-25 00:43:40', 980190962)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "badges" ("issuer_url", "issuer_organization", "name", "description", "img_url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:40', '2016-05-25 00:43:40', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "questions"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "questions" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:40', '2016-05-25 00:43:40', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "questions" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:40', '2016-05-25 00:43:40', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "objective_textuals"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "objective_textuals" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:40', '2016-05-25 00:43:40', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "objective_textuals" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:40', '2016-05-25 00:43:40', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "characters"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "characters" ("name", "xp", "gold", "hair", "skin", "shirt", "pants", "created_at", "updated_at", "id") VALUES ('MyString', 1, 1, 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:40', '2016-05-25 00:43:40', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "characters" ("name", "xp", "gold", "hair", "skin", "shirt", "pants", "created_at", "updated_at", "id") VALUES ('MyString', 1, 1, 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:40', '2016-05-25 00:43:40', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "drag_drops"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "drag_drops" ("lesson", "statement", "a", "b", "c", "d", "atitle", "btitle", "ctitle", "dtitle", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:40', '2016-05-25 00:43:40', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "drag_drops" ("lesson", "statement", "a", "b", "c", "d", "atitle", "btitle", "ctitle", "dtitle", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:40', '2016-05-25 00:43:40', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('julian', 'julian@eu.com.br', '2016-05-25 00:43:40', '2016-05-25 00:43:40', 980190962)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "inventories"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "inventories" ("user_id", "created_at", "updated_at", "id") VALUES (1, '2016-05-25 00:43:40', '2016-05-25 00:43:40', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "inventories" ("user_id", "created_at", "updated_at", "id") VALUES (2, '2016-05-25 00:43:40', '2016-05-25 00:43:40', 298486374)
+  [1m[36m (7.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (10.1ms)[0m  ALTER TABLE "inventories" ENABLE TRIGGER ALL;ALTER TABLE "drag_drops" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "lessons" ENABLE TRIGGER ALL;ALTER TABLE "badges" ENABLE TRIGGER ALL;ALTER TABLE "objective_images" ENABLE TRIGGER ALL;ALTER TABLE "objective_textuals" ENABLE TRIGGER ALL;ALTER TABLE "questions" ENABLE TRIGGER ALL;ALTER TABLE "subjective_textuals" ENABLE TRIGGER ALL;ALTER TABLE "characters" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "done_lessons" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "line_badges" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+-----------------------------------------
+MainControllerTest: test_should_get_index
+-----------------------------------------
+Processing by MainController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------------------------------------
+ObjectiveTextualsControllerTest: test_should_update_objective_textual
+---------------------------------------------------------------------
+  [1m[35mObjectiveTextual Load (0.2ms)[0m  SELECT  "objective_textuals".* FROM "objective_textuals" WHERE "objective_textuals"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by ObjectiveTextualsController#update as HTML
+  Parameters: {"objective_textual"=>{"a"=>"MyString", "b"=>"MyString", "c"=>"MyString", "d"=>"MyString", "lesson"=>"MyString", "statement"=>"MyString"}, "id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------------------------------------
+ObjectiveTextualsControllerTest: test_should_create_objective_textual
+---------------------------------------------------------------------
+  [1m[36mObjectiveTextual Load (0.2ms)[0m  [1mSELECT  "objective_textuals".* FROM "objective_textuals" WHERE "objective_textuals"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "objective_textuals"
+Processing by ObjectiveTextualsController#create as HTML
+  Parameters: {"objective_textual"=>{"a"=>"MyString", "b"=>"MyString", "c"=>"MyString", "d"=>"MyString", "lesson"=>"MyString", "statement"=>"MyString"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------------------------
+ObjectiveTextualsControllerTest: test_should_destroy_objective_textual
+----------------------------------------------------------------------
+  [1m[36mObjectiveTextual Load (0.3ms)[0m  [1mSELECT  "objective_textuals".* FROM "objective_textuals" WHERE "objective_textuals"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "objective_textuals"
+Processing by ObjectiveTextualsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------
+ObjectiveTextualsControllerTest: test_should_get_new
+----------------------------------------------------
+  [1m[36mObjectiveTextual Load (0.3ms)[0m  [1mSELECT  "objective_textuals".* FROM "objective_textuals" WHERE "objective_textuals"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by ObjectiveTextualsController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------
+ObjectiveTextualsControllerTest: test_should_get_edit
+-----------------------------------------------------
+  [1m[35mObjectiveTextual Load (0.3ms)[0m  SELECT  "objective_textuals".* FROM "objective_textuals" WHERE "objective_textuals"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by ObjectiveTextualsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------------------------------------
+ObjectiveTextualsControllerTest: test_should_show_objective_textual
+-------------------------------------------------------------------
+  [1m[36mObjectiveTextual Load (0.3ms)[0m  [1mSELECT  "objective_textuals".* FROM "objective_textuals" WHERE "objective_textuals"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by ObjectiveTextualsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+ObjectiveTextualsControllerTest: test_should_get_index
+------------------------------------------------------
+  [1m[35mObjectiveTextual Load (0.2ms)[0m  SELECT  "objective_textuals".* FROM "objective_textuals" WHERE "objective_textuals"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by ObjectiveTextualsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------
+InventoriesControllerTest: test_should_get_new
+----------------------------------------------
+  [1m[36mInventory Load (0.2ms)[0m  [1mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by InventoriesController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------------------------
+InventoriesControllerTest: test_should_update_inventory
+-------------------------------------------------------
+  [1m[35mInventory Load (0.3ms)[0m  SELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+--------------------------------------------------------
+InventoriesControllerTest: test_should_destroy_inventory
+--------------------------------------------------------
+  [1m[36mInventory Load (0.2ms)[0m  [1mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "inventories"
+Processing by InventoriesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------
+InventoriesControllerTest: test_should_get_edit
+-----------------------------------------------
+  [1m[36mInventory Load (0.2ms)[0m  [1mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by InventoriesController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------
+InventoriesControllerTest: test_should_show_inventory
+-----------------------------------------------------
+  [1m[35mInventory Load (0.2ms)[0m  SELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by InventoriesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+InventoriesControllerTest: test_should_get_index
+------------------------------------------------
+  [1m[36mInventory Load (0.2ms)[0m  [1mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by InventoriesController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+-------------------------------------------------------
+InventoriesControllerTest: test_should_create_inventory
+-------------------------------------------------------
+  [1m[35mInventory Load (0.3ms)[0m  SELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "inventories"[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------------------------
+LineBadgesControllerTest: test_should_create_line_badge
+-------------------------------------------------------
+  [1m[35mLineBadge Load (0.4ms)[0m  SELECT  "line_badges".* FROM "line_badges" WHERE "line_badges"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "line_badges"[0m
+Processing by LineBadgesController#create as HTML
+  Parameters: {"line_badge"=>{"badge_id"=>nil, "user_id"=>nil}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------------------------
+LineBadgesControllerTest: test_should_update_line_badge
+-------------------------------------------------------
+  [1m[35mLineBadge Load (0.3ms)[0m  SELECT  "line_badges".* FROM "line_badges" WHERE "line_badges"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by LineBadgesController#update as HTML
+  Parameters: {"line_badge"=>{"badge_id"=>nil, "user_id"=>nil}, "id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------------------
+LineBadgesControllerTest: test_should_destroy_line_badge
+--------------------------------------------------------
+  [1m[36mLineBadge Load (0.3ms)[0m  [1mSELECT  "line_badges".* FROM "line_badges" WHERE "line_badges"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "line_badges"
+Processing by LineBadgesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-----------------------------------------------
+LineBadgesControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[36mLineBadge Load (0.3ms)[0m  [1mSELECT  "line_badges".* FROM "line_badges" WHERE "line_badges"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by LineBadgesController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------
+LineBadgesControllerTest: test_should_show_line_badge
+-----------------------------------------------------
+  [1m[35mLineBadge Load (0.3ms)[0m  SELECT  "line_badges".* FROM "line_badges" WHERE "line_badges"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by LineBadgesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------
+LineBadgesControllerTest: test_should_get_edit
+----------------------------------------------
+  [1m[36mLineBadge Load (0.3ms)[0m  [1mSELECT  "line_badges".* FROM "line_badges" WHERE "line_badges"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by LineBadgesController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------------
+LineBadgesControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35mLineBadge Load (0.2ms)[0m  SELECT  "line_badges".* FROM "line_badges" WHERE "line_badges"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by LineBadgesController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+----------------------------------------------
+QuizControllerTest: test_should_get_gerar_quiz
+----------------------------------------------
+Processing by QuizController#gerar_quiz as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------
+QuizControllerTest: test_should_get_index
+-----------------------------------------
+Processing by QuizController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------
+AdminControllerTest: test_should_get_index
+------------------------------------------
+Processing by AdminController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-------------------------------------------------
+LessonsControllerTest: test_should_destroy_lesson
+-------------------------------------------------
+  [1m[36mLesson Load (0.3ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "lessons"
+Processing by LessonsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------
+LessonsControllerTest: test_should_get_index
+--------------------------------------------
+  [1m[36mLesson Load (0.3ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by LessonsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------
+LessonsControllerTest: test_should_get_new
+------------------------------------------
+  [1m[35mLesson Load (0.3ms)[0m  SELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by LessonsController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------------
+LessonsControllerTest: test_should_create_lesson
+------------------------------------------------
+  [1m[36mLesson Load (2.6ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "lessons"
+Processing by LessonsController#create as HTML
+  Parameters: {"lesson"=>{"subject"=>"MyString", "url"=>"MyString"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------
+LessonsControllerTest: test_should_show_lesson
+----------------------------------------------
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------------
+LessonsControllerTest: test_should_get_edit
+-------------------------------------------
+  [1m[35mLesson Load (0.3ms)[0m  SELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by LessonsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+LessonsControllerTest: test_should_update_lesson
+------------------------------------------------
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by LessonsController#update as HTML
+  Parameters: {"lesson"=>{"subject"=>"MyString", "url"=>"MyString"}, "id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------------
+ItemsControllerTest: test_should_destroy_item
+---------------------------------------------
+  [1m[35mItem Load (0.3ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "items"[0m
+Processing by ItemsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------
+ItemsControllerTest: test_should_get_edit
+-----------------------------------------
+  [1m[35mItem Load (0.2ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------
+ItemsControllerTest: test_should_get_new
+----------------------------------------
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by ItemsController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------
+ItemsControllerTest: test_should_show_item
+------------------------------------------
+  [1m[35mItem Load (0.2ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------
+ItemsControllerTest: test_should_update_item
+--------------------------------------------
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by ItemsController#update as HTML
+  Parameters: {"item"=>{"img"=>"MyString", "name"=>"MyString", "price"=>"1"}, "id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------------------
+ItemsControllerTest: test_should_create_item
+--------------------------------------------
+  [1m[35mItem Load (0.4ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "items"[0m
+Processing by ItemsController#create as HTML
+  Parameters: {"item"=>{"img"=>"MyString", "name"=>"MyString", "price"=>"1"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------
+ItemsControllerTest: test_should_get_index
+------------------------------------------
+  [1m[35mItem Load (0.2ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by ItemsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------------------------
+ObjectiveImagesControllerTest: test_should_update_objective_image
+-----------------------------------------------------------------
+  [1m[36mObjectiveImage Load (0.2ms)[0m  [1mSELECT  "objective_images".* FROM "objective_images" WHERE "objective_images"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by ObjectiveImagesController#update as HTML
+  Parameters: {"objective_image"=>{"aimg"=>"MyString", "bimg"=>"MyString", "cimg"=>"MyString", "lesson"=>"MyString", "statement"=>"MyString"}, "id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+ObjectiveImagesControllerTest: test_should_get_index
+----------------------------------------------------
+  [1m[35mObjectiveImage Load (0.4ms)[0m  SELECT  "objective_images".* FROM "objective_images" WHERE "objective_images"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by ObjectiveImagesController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------------------------
+ObjectiveImagesControllerTest: test_should_create_objective_image
+-----------------------------------------------------------------
+  [1m[36mObjectiveImage Load (0.2ms)[0m  [1mSELECT  "objective_images".* FROM "objective_images" WHERE "objective_images"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "objective_images"
+Processing by ObjectiveImagesController#create as HTML
+  Parameters: {"objective_image"=>{"aimg"=>"MyString", "bimg"=>"MyString", "cimg"=>"MyString", "lesson"=>"MyString", "statement"=>"MyString"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------------
+ObjectiveImagesControllerTest: test_should_get_new
+--------------------------------------------------
+  [1m[36mObjectiveImage Load (0.2ms)[0m  [1mSELECT  "objective_images".* FROM "objective_images" WHERE "objective_images"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by ObjectiveImagesController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------------------------------
+ObjectiveImagesControllerTest: test_should_show_objective_image
+---------------------------------------------------------------
+  [1m[35mObjectiveImage Load (0.2ms)[0m  SELECT  "objective_images".* FROM "objective_images" WHERE "objective_images"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by ObjectiveImagesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------------------------
+ObjectiveImagesControllerTest: test_should_destroy_objective_image
+------------------------------------------------------------------
+  [1m[36mObjectiveImage Load (0.3ms)[0m  [1mSELECT  "objective_images".* FROM "objective_images" WHERE "objective_images"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "objective_images"
+Processing by ObjectiveImagesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------------------
+ObjectiveImagesControllerTest: test_should_get_edit
+---------------------------------------------------
+  [1m[36mObjectiveImage Load (0.1ms)[0m  [1mSELECT  "objective_images".* FROM "objective_images" WHERE "objective_images"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by ObjectiveImagesController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+SubjectiveTextualsControllerTest: test_should_get_edit
+------------------------------------------------------
+  [1m[35mSubjectiveTextual Load (0.3ms)[0m  SELECT  "subjective_textuals".* FROM "subjective_textuals" WHERE "subjective_textuals"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by SubjectiveTextualsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------------------------------
+SubjectiveTextualsControllerTest: test_should_create_subjective_textual
+-----------------------------------------------------------------------
+  [1m[36mSubjectiveTextual Load (0.3ms)[0m  [1mSELECT  "subjective_textuals".* FROM "subjective_textuals" WHERE "subjective_textuals"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "subjective_textuals"
+Processing by SubjectiveTextualsController#create as HTML
+  Parameters: {"subjective_textual"=>{"answer"=>"MyText", "lesson"=>"MyString", "statement"=>"MyString"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------------------------------
+SubjectiveTextualsControllerTest: test_should_update_subjective_textual
+-----------------------------------------------------------------------
+  [1m[36mSubjectiveTextual Load (0.2ms)[0m  [1mSELECT  "subjective_textuals".* FROM "subjective_textuals" WHERE "subjective_textuals"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by SubjectiveTextualsController#update as HTML
+  Parameters: {"subjective_textual"=>{"answer"=>"MyText", "lesson"=>"MyString", "statement"=>"MyString"}, "id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------------------------------
+SubjectiveTextualsControllerTest: test_should_destroy_subjective_textual
+------------------------------------------------------------------------
+  [1m[35mSubjectiveTextual Load (0.2ms)[0m  SELECT  "subjective_textuals".* FROM "subjective_textuals" WHERE "subjective_textuals"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "subjective_textuals"[0m
+Processing by SubjectiveTextualsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------------------------
+SubjectiveTextualsControllerTest: test_should_get_index
+-------------------------------------------------------
+  [1m[35mSubjectiveTextual Load (0.2ms)[0m  SELECT  "subjective_textuals".* FROM "subjective_textuals" WHERE "subjective_textuals"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by SubjectiveTextualsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------------
+SubjectiveTextualsControllerTest: test_should_get_new
+-----------------------------------------------------
+  [1m[36mSubjectiveTextual Load (0.2ms)[0m  [1mSELECT  "subjective_textuals".* FROM "subjective_textuals" WHERE "subjective_textuals"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by SubjectiveTextualsController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------------------------------------
+SubjectiveTextualsControllerTest: test_should_show_subjective_textual
+---------------------------------------------------------------------
+  [1m[35mSubjectiveTextual Load (0.1ms)[0m  SELECT  "subjective_textuals".* FROM "subjective_textuals" WHERE "subjective_textuals"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by SubjectiveTextualsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------------------------
+CharactersControllerTest: test_should_destroy_character
+-------------------------------------------------------
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "characters"
+Processing by CharactersController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------------
+CharactersControllerTest: test_should_create_character
+------------------------------------------------------
+  [1m[36mCharacter Load (0.4ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "characters"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------------
+CharactersControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by CharactersController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+CharactersControllerTest: test_should_show_character
+----------------------------------------------------
+  [1m[35mCharacter Load (0.3ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------
+CharactersControllerTest: test_should_get_edit
+----------------------------------------------
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by CharactersController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------------
+CharactersControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[35mCharacter Load (0.3ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by CharactersController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------------
+CharactersControllerTest: test_should_update_character
+------------------------------------------------------
+  [1m[36mCharacter Load (0.1ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------
+BadgesControllerTest: test_should_create_badge
+----------------------------------------------
+  [1m[35mBadge Load (0.2ms)[0m  SELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "badges"[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------
+BadgesControllerTest: test_should_update_badge
+----------------------------------------------
+  [1m[35mBadge Load (0.2ms)[0m  SELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------
+BadgesControllerTest: test_should_destroy_badge
+-----------------------------------------------
+  [1m[36mBadge Load (0.2ms)[0m  [1mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "badges"
+Processing by BadgesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------
+BadgesControllerTest: test_should_get_new
+-----------------------------------------
+  [1m[36mBadge Load (0.3ms)[0m  [1mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by BadgesController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------
+BadgesControllerTest: test_should_get_edit
+------------------------------------------
+  [1m[35mBadge Load (0.2ms)[0m  SELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by BadgesController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------------
+BadgesControllerTest: test_should_get_index
+-------------------------------------------
+  [1m[36mBadge Load (0.3ms)[0m  [1mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by BadgesController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------------------
+BadgesControllerTest: test_should_show_badge
+--------------------------------------------
+  [1m[35mBadge Load (0.2ms)[0m  SELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by BadgesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------
+CharacterTest: test_the_truth
+-----------------------------
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------------------------
+DoneLessonsControllerTest: test_should_show_done_lesson
+-------------------------------------------------------
+  [1m[36mDoneLesson Load (0.3ms)[0m  [1mSELECT  "done_lessons".* FROM "done_lessons" WHERE "done_lessons"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by DoneLessonsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------
+DoneLessonsControllerTest: test_should_get_index
+------------------------------------------------
+  [1m[35mDoneLesson Load (0.3ms)[0m  SELECT  "done_lessons".* FROM "done_lessons" WHERE "done_lessons"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by DoneLessonsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------
+DoneLessonsControllerTest: test_should_get_edit
+-----------------------------------------------
+  [1m[36mDoneLesson Load (0.3ms)[0m  [1mSELECT  "done_lessons".* FROM "done_lessons" WHERE "done_lessons"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by DoneLessonsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------------------
+DoneLessonsControllerTest: test_should_destroy_done_lesson
+----------------------------------------------------------
+  [1m[35mDoneLesson Load (0.2ms)[0m  SELECT  "done_lessons".* FROM "done_lessons" WHERE "done_lessons"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "done_lessons"[0m
+Processing by DoneLessonsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------
+DoneLessonsControllerTest: test_should_get_new
+----------------------------------------------
+  [1m[35mDoneLesson Load (0.3ms)[0m  SELECT  "done_lessons".* FROM "done_lessons" WHERE "done_lessons"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by DoneLessonsController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------------------------
+DoneLessonsControllerTest: test_should_update_done_lesson
+---------------------------------------------------------
+  [1m[36mDoneLesson Load (0.2ms)[0m  [1mSELECT  "done_lessons".* FROM "done_lessons" WHERE "done_lessons"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------------------------
+DoneLessonsControllerTest: test_should_create_done_lesson
+---------------------------------------------------------
+  [1m[35mDoneLesson Load (0.2ms)[0m  SELECT  "done_lessons".* FROM "done_lessons" WHERE "done_lessons"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "done_lessons"[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+---------------------------------------------
+QuestionsControllerTest: test_should_get_edit
+---------------------------------------------
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------
+QuestionsControllerTest: test_should_create_question
+----------------------------------------------------
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "questions"
+Processing by QuestionsController#create as HTML
+  Parameters: {"question"=>{"a"=>"MyString", "b"=>"MyString", "c"=>"MyString", "d"=>"MyString", "lesson"=>"MyString", "statement"=>"MyText"}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------
+QuestionsControllerTest: test_should_get_new
+--------------------------------------------
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by QuestionsController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+QuestionsControllerTest: test_should_update_question
+----------------------------------------------------
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by QuestionsController#update as HTML
+  Parameters: {"question"=>{"a"=>"MyString", "b"=>"MyString", "c"=>"MyString", "d"=>"MyString", "lesson"=>"MyString", "statement"=>"MyText"}, "id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------------
+QuestionsControllerTest: test_should_destroy_question
+-----------------------------------------------------
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "questions"
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------
+QuestionsControllerTest: test_should_get_index
+----------------------------------------------
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by QuestionsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------------------------
+QuestionsControllerTest: test_should_show_question
+--------------------------------------------------
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------
+StoreControllerTest: test_should_get_index
+------------------------------------------
+Processing by StoreController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------------
+DragDropsControllerTest: test_should_create_drag_drop
+-----------------------------------------------------
+  [1m[36mDragDrop Load (0.3ms)[0m  [1mSELECT  "drag_drops".* FROM "drag_drops" WHERE "drag_drops"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "drag_drops"
+Processing by DragDropsController#create as HTML
+  Parameters: {"drag_drop"=>{"a"=>"MyString", "atitle"=>"MyString", "b"=>"MyString", "btitle"=>"MyString", "c"=>"MyString", "ctitle"=>"MyString", "d"=>"MyString", "dtitle"=>"MyString", "lesson"=>"MyString", "statement"=>"MyString"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------------
+DragDropsControllerTest: test_should_get_edit
+---------------------------------------------
+  [1m[36mDragDrop Load (0.3ms)[0m  [1mSELECT  "drag_drops".* FROM "drag_drops" WHERE "drag_drops"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by DragDropsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------------------
+DragDropsControllerTest: test_should_show_drag_drop
+---------------------------------------------------
+  [1m[35mDragDrop Load (0.3ms)[0m  SELECT  "drag_drops".* FROM "drag_drops" WHERE "drag_drops"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by DragDropsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------
+DragDropsControllerTest: test_should_get_new
+--------------------------------------------
+  [1m[36mDragDrop Load (0.3ms)[0m  [1mSELECT  "drag_drops".* FROM "drag_drops" WHERE "drag_drops"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by DragDropsController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------
+DragDropsControllerTest: test_should_get_index
+----------------------------------------------
+  [1m[35mDragDrop Load (0.2ms)[0m  SELECT  "drag_drops".* FROM "drag_drops" WHERE "drag_drops"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by DragDropsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------------
+DragDropsControllerTest: test_should_update_drag_drop
+-----------------------------------------------------
+  [1m[36mDragDrop Load (0.2ms)[0m  [1mSELECT  "drag_drops".* FROM "drag_drops" WHERE "drag_drops"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by DragDropsController#update as HTML
+  Parameters: {"drag_drop"=>{"a"=>"MyString", "atitle"=>"MyString", "b"=>"MyString", "btitle"=>"MyString", "c"=>"MyString", "ctitle"=>"MyString", "d"=>"MyString", "dtitle"=>"MyString", "lesson"=>"MyString", "statement"=>"MyString"}, "id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+DragDropsControllerTest: test_should_destroy_drag_drop
+------------------------------------------------------
+  [1m[35mDragDrop Load (0.2ms)[0m  SELECT  "drag_drops".* FROM "drag_drops" WHERE "drag_drops"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "drag_drops"[0m
+Processing by DragDropsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+LineItemsControllerTest: test_should_destroy_line_item
+------------------------------------------------------
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT  "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "line_items"[0m
+Processing by LineItemsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------
+LineItemsControllerTest: test_should_get_index
+----------------------------------------------
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT  "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by LineItemsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------------
+LineItemsControllerTest: test_should_create_line_item
+-----------------------------------------------------
+  [1m[36mLineItem Load (0.2ms)[0m  [1mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "line_items"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------------------
+LineItemsControllerTest: test_should_show_line_item
+---------------------------------------------------
+  [1m[36mLineItem Load (0.2ms)[0m  [1mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by LineItemsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------------------
+LineItemsControllerTest: test_should_get_new
+--------------------------------------------
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT  "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by LineItemsController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------------
+LineItemsControllerTest: test_should_update_line_item
+-----------------------------------------------------
+  [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------------
+LineItemsControllerTest: test_should_get_edit
+---------------------------------------------
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT  "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by LineItemsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (6.7ms)[0m  ALTER TABLE "inventories" DISABLE TRIGGER ALL;ALTER TABLE "drag_drops" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "lessons" DISABLE TRIGGER ALL;ALTER TABLE "badges" DISABLE TRIGGER ALL;ALTER TABLE "objective_images" DISABLE TRIGGER ALL;ALTER TABLE "objective_textuals" DISABLE TRIGGER ALL;ALTER TABLE "questions" DISABLE TRIGGER ALL;ALTER TABLE "subjective_textuals" DISABLE TRIGGER ALL;ALTER TABLE "characters" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "done_lessons" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "line_badges" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "line_badges"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "line_badges" ("badge_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:43:48', '2016-05-25 00:43:48', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "line_badges" ("badge_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:43:48', '2016-05-25 00:43:48', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "done_lessons"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "done_lessons" ("lesson_id", "character_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:43:48', '2016-05-25 00:43:48', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "done_lessons" ("lesson_id", "character_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:43:48', '2016-05-25 00:43:48', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "lessons"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "lessons" ("url", "subject", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-05-25 00:43:48', '2016-05-25 00:43:48', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "lessons" ("url", "subject", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-05-25 00:43:48', '2016-05-25 00:43:48', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "subjective_textuals"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "subjective_textuals" ("lesson", "statement", "answer", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2016-05-25 00:43:48', '2016-05-25 00:43:48', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "subjective_textuals" ("lesson", "statement", "answer", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2016-05-25 00:43:48', '2016-05-25 00:43:48', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "items"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "items" ("name", "img", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2016-05-25 00:43:48', '2016-05-25 00:43:48', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "items" ("name", "img", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2016-05-25 00:43:48', '2016-05-25 00:43:48', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "line_items"[0m
+  [1m[35mFixture Insert (0.9ms)[0m  INSERT INTO "line_items" ("item_id", "inventory_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:43:48', '2016-05-25 00:43:48', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "line_items" ("item_id", "inventory_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:43:48', '2016-05-25 00:43:48', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "objective_images"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "objective_images" ("lesson", "statement", "aimg", "bimg", "cimg", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:48', '2016-05-25 00:43:48', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "objective_images" ("lesson", "statement", "aimg", "bimg", "cimg", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:48', '2016-05-25 00:43:48', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "badges"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "badges" ("issuer_url", "issuer_organization", "name", "description", "img_url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:48', '2016-05-25 00:43:48', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "badges" ("issuer_url", "issuer_organization", "name", "description", "img_url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:48', '2016-05-25 00:43:48', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "questions"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "questions" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:48', '2016-05-25 00:43:48', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "questions" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:48', '2016-05-25 00:43:48', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "objective_textuals"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "objective_textuals" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:48', '2016-05-25 00:43:48', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "objective_textuals" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:48', '2016-05-25 00:43:48', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "characters"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "characters" ("name", "xp", "gold", "hair", "skin", "shirt", "pants", "created_at", "updated_at", "id") VALUES ('MyString', 1, 1, 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:48', '2016-05-25 00:43:48', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "characters" ("name", "xp", "gold", "hair", "skin", "shirt", "pants", "created_at", "updated_at", "id") VALUES ('MyString', 1, 1, 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:48', '2016-05-25 00:43:48', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "drag_drops"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "drag_drops" ("lesson", "statement", "a", "b", "c", "d", "atitle", "btitle", "ctitle", "dtitle", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:48', '2016-05-25 00:43:48', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "drag_drops" ("lesson", "statement", "a", "b", "c", "d", "atitle", "btitle", "ctitle", "dtitle", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:43:48', '2016-05-25 00:43:48', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('julian', 'julian@eu.com.br', '2016-05-25 00:43:48', '2016-05-25 00:43:48', 980190962)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "inventories"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "inventories" ("user_id", "created_at", "updated_at", "id") VALUES (1, '2016-05-25 00:43:48', '2016-05-25 00:43:48', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "inventories" ("user_id", "created_at", "updated_at", "id") VALUES (2, '2016-05-25 00:43:48', '2016-05-25 00:43:48', 298486374)
+  [1m[36m (11.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (9.9ms)[0m  ALTER TABLE "inventories" ENABLE TRIGGER ALL;ALTER TABLE "drag_drops" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "lessons" ENABLE TRIGGER ALL;ALTER TABLE "badges" ENABLE TRIGGER ALL;ALTER TABLE "objective_images" ENABLE TRIGGER ALL;ALTER TABLE "objective_textuals" ENABLE TRIGGER ALL;ALTER TABLE "questions" ENABLE TRIGGER ALL;ALTER TABLE "subjective_textuals" ENABLE TRIGGER ALL;ALTER TABLE "characters" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "done_lessons" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "line_badges" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+-----------------------------
+CharacterTest: test_the_truth
+-----------------------------
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (20.7ms)[0m  ALTER TABLE "inventories" DISABLE TRIGGER ALL;ALTER TABLE "drag_drops" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "lessons" DISABLE TRIGGER ALL;ALTER TABLE "badges" DISABLE TRIGGER ALL;ALTER TABLE "objective_images" DISABLE TRIGGER ALL;ALTER TABLE "objective_textuals" DISABLE TRIGGER ALL;ALTER TABLE "questions" DISABLE TRIGGER ALL;ALTER TABLE "subjective_textuals" DISABLE TRIGGER ALL;ALTER TABLE "characters" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "done_lessons" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "line_badges" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "line_badges"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "line_badges" ("badge_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:49:40', '2016-05-25 00:49:40', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "line_badges" ("badge_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:49:40', '2016-05-25 00:49:40', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "done_lessons"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "done_lessons" ("lesson_id", "character_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:49:40', '2016-05-25 00:49:40', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "done_lessons" ("lesson_id", "character_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:49:40', '2016-05-25 00:49:40', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "lessons"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "lessons" ("url", "subject", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-05-25 00:49:40', '2016-05-25 00:49:40', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "lessons" ("url", "subject", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-05-25 00:49:40', '2016-05-25 00:49:40', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "subjective_textuals"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "subjective_textuals" ("lesson", "statement", "answer", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2016-05-25 00:49:40', '2016-05-25 00:49:40', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "subjective_textuals" ("lesson", "statement", "answer", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2016-05-25 00:49:40', '2016-05-25 00:49:40', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "items"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "items" ("name", "img", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2016-05-25 00:49:40', '2016-05-25 00:49:40', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "items" ("name", "img", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2016-05-25 00:49:40', '2016-05-25 00:49:40', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "line_items"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "line_items" ("item_id", "inventory_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:49:40', '2016-05-25 00:49:40', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "line_items" ("item_id", "inventory_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:49:40', '2016-05-25 00:49:40', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "objective_images"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "objective_images" ("lesson", "statement", "aimg", "bimg", "cimg", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:49:40', '2016-05-25 00:49:40', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "objective_images" ("lesson", "statement", "aimg", "bimg", "cimg", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:49:40', '2016-05-25 00:49:40', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "badges"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "badges" ("issuer_url", "issuer_organization", "name", "description", "img_url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:49:40', '2016-05-25 00:49:40', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "badges" ("issuer_url", "issuer_organization", "name", "description", "img_url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:49:40', '2016-05-25 00:49:40', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "questions"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "questions" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:49:40', '2016-05-25 00:49:40', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "questions" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:49:40', '2016-05-25 00:49:40', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "objective_textuals"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "objective_textuals" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:49:40', '2016-05-25 00:49:40', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "objective_textuals" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:49:40', '2016-05-25 00:49:40', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "characters"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "characters" ("name", "xp", "gold", "hair", "skin", "shirt", "pants", "created_at", "updated_at", "id") VALUES ('MyString', 1, 1, 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:49:40', '2016-05-25 00:49:40', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "characters" ("name", "xp", "gold", "hair", "skin", "shirt", "pants", "created_at", "updated_at", "id") VALUES ('MyString', 1, 1, 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:49:40', '2016-05-25 00:49:40', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "drag_drops"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "drag_drops" ("lesson", "statement", "a", "b", "c", "d", "atitle", "btitle", "ctitle", "dtitle", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:49:40', '2016-05-25 00:49:40', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "drag_drops" ("lesson", "statement", "a", "b", "c", "d", "atitle", "btitle", "ctitle", "dtitle", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:49:40', '2016-05-25 00:49:40', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('julian', 'julian@eu.com.br', '2016-05-25 00:49:40', '2016-05-25 00:49:40', 980190962)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "inventories"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "inventories" ("user_id", "created_at", "updated_at", "id") VALUES (1, '2016-05-25 00:49:40', '2016-05-25 00:49:40', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "inventories" ("user_id", "created_at", "updated_at", "id") VALUES (2, '2016-05-25 00:49:40', '2016-05-25 00:49:40', 298486374)
+  [1m[36m (13.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (10.0ms)[0m  ALTER TABLE "inventories" ENABLE TRIGGER ALL;ALTER TABLE "drag_drops" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "lessons" ENABLE TRIGGER ALL;ALTER TABLE "badges" ENABLE TRIGGER ALL;ALTER TABLE "objective_images" ENABLE TRIGGER ALL;ALTER TABLE "objective_textuals" ENABLE TRIGGER ALL;ALTER TABLE "questions" ENABLE TRIGGER ALL;ALTER TABLE "subjective_textuals" ENABLE TRIGGER ALL;ALTER TABLE "characters" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "done_lessons" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "line_badges" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+----------------------------------------------------------
+CharacterTest: test_should_not_save_character_without_name
+----------------------------------------------------------
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "characters" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-05-25 00:49:40.661985"], ["updated_at", "2016-05-25 00:49:40.661985"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (11.8ms)[0m  ALTER TABLE "inventories" DISABLE TRIGGER ALL;ALTER TABLE "drag_drops" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "lessons" DISABLE TRIGGER ALL;ALTER TABLE "badges" DISABLE TRIGGER ALL;ALTER TABLE "objective_images" DISABLE TRIGGER ALL;ALTER TABLE "objective_textuals" DISABLE TRIGGER ALL;ALTER TABLE "questions" DISABLE TRIGGER ALL;ALTER TABLE "subjective_textuals" DISABLE TRIGGER ALL;ALTER TABLE "characters" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "done_lessons" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "line_badges" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "line_badges"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "line_badges" ("badge_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:50:22', '2016-05-25 00:50:22', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "line_badges" ("badge_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:50:22', '2016-05-25 00:50:22', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "done_lessons"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "done_lessons" ("lesson_id", "character_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:50:22', '2016-05-25 00:50:22', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "done_lessons" ("lesson_id", "character_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:50:22', '2016-05-25 00:50:22', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "lessons"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "lessons" ("url", "subject", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-05-25 00:50:22', '2016-05-25 00:50:22', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "lessons" ("url", "subject", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-05-25 00:50:22', '2016-05-25 00:50:22', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "subjective_textuals"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "subjective_textuals" ("lesson", "statement", "answer", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2016-05-25 00:50:22', '2016-05-25 00:50:22', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "subjective_textuals" ("lesson", "statement", "answer", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2016-05-25 00:50:22', '2016-05-25 00:50:22', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "items"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "items" ("name", "img", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2016-05-25 00:50:22', '2016-05-25 00:50:22', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "items" ("name", "img", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2016-05-25 00:50:22', '2016-05-25 00:50:22', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "line_items"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "line_items" ("item_id", "inventory_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:50:22', '2016-05-25 00:50:22', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "line_items" ("item_id", "inventory_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:50:22', '2016-05-25 00:50:22', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "objective_images"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "objective_images" ("lesson", "statement", "aimg", "bimg", "cimg", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:50:22', '2016-05-25 00:50:22', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "objective_images" ("lesson", "statement", "aimg", "bimg", "cimg", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:50:22', '2016-05-25 00:50:22', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "badges"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "badges" ("issuer_url", "issuer_organization", "name", "description", "img_url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:50:22', '2016-05-25 00:50:22', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "badges" ("issuer_url", "issuer_organization", "name", "description", "img_url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:50:22', '2016-05-25 00:50:22', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "questions"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "questions" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:50:22', '2016-05-25 00:50:22', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "questions" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:50:22', '2016-05-25 00:50:22', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "objective_textuals"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "objective_textuals" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:50:22', '2016-05-25 00:50:22', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "objective_textuals" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:50:22', '2016-05-25 00:50:22', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "characters"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "characters" ("name", "xp", "gold", "hair", "skin", "shirt", "pants", "created_at", "updated_at", "id") VALUES ('MyString', 1, 1, 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:50:22', '2016-05-25 00:50:22', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "characters" ("name", "xp", "gold", "hair", "skin", "shirt", "pants", "created_at", "updated_at", "id") VALUES ('MyString', 1, 1, 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:50:22', '2016-05-25 00:50:22', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "drag_drops"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "drag_drops" ("lesson", "statement", "a", "b", "c", "d", "atitle", "btitle", "ctitle", "dtitle", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:50:22', '2016-05-25 00:50:22', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "drag_drops" ("lesson", "statement", "a", "b", "c", "d", "atitle", "btitle", "ctitle", "dtitle", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:50:22', '2016-05-25 00:50:22', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('julian', 'julian@eu.com.br', '2016-05-25 00:50:22', '2016-05-25 00:50:22', 980190962)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "inventories"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "inventories" ("user_id", "created_at", "updated_at", "id") VALUES (1, '2016-05-25 00:50:22', '2016-05-25 00:50:22', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "inventories" ("user_id", "created_at", "updated_at", "id") VALUES (2, '2016-05-25 00:50:22', '2016-05-25 00:50:22', 298486374)
+  [1m[36m (2.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (10.2ms)[0m  ALTER TABLE "inventories" ENABLE TRIGGER ALL;ALTER TABLE "drag_drops" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "lessons" ENABLE TRIGGER ALL;ALTER TABLE "badges" ENABLE TRIGGER ALL;ALTER TABLE "objective_images" ENABLE TRIGGER ALL;ALTER TABLE "objective_textuals" ENABLE TRIGGER ALL;ALTER TABLE "questions" ENABLE TRIGGER ALL;ALTER TABLE "subjective_textuals" ENABLE TRIGGER ALL;ALTER TABLE "characters" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "done_lessons" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "line_badges" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+----------------------------------------------------------
+CharacterTest: test_should_not_save_character_without_name
+----------------------------------------------------------
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "characters" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-05-25 00:50:22.484536"], ["updated_at", "2016-05-25 00:50:22.484536"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (16.4ms)[0m  ALTER TABLE "inventories" DISABLE TRIGGER ALL;ALTER TABLE "drag_drops" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "lessons" DISABLE TRIGGER ALL;ALTER TABLE "badges" DISABLE TRIGGER ALL;ALTER TABLE "objective_images" DISABLE TRIGGER ALL;ALTER TABLE "objective_textuals" DISABLE TRIGGER ALL;ALTER TABLE "questions" DISABLE TRIGGER ALL;ALTER TABLE "subjective_textuals" DISABLE TRIGGER ALL;ALTER TABLE "characters" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "done_lessons" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "line_badges" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "line_badges"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "line_badges" ("badge_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:51:03', '2016-05-25 00:51:03', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "line_badges" ("badge_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:51:03', '2016-05-25 00:51:03', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "done_lessons"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "done_lessons" ("lesson_id", "character_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:51:03', '2016-05-25 00:51:03', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "done_lessons" ("lesson_id", "character_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:51:03', '2016-05-25 00:51:03', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "lessons"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "lessons" ("url", "subject", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-05-25 00:51:03', '2016-05-25 00:51:03', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "lessons" ("url", "subject", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-05-25 00:51:03', '2016-05-25 00:51:03', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "subjective_textuals"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "subjective_textuals" ("lesson", "statement", "answer", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2016-05-25 00:51:03', '2016-05-25 00:51:03', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "subjective_textuals" ("lesson", "statement", "answer", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2016-05-25 00:51:03', '2016-05-25 00:51:03', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "items"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "items" ("name", "img", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2016-05-25 00:51:03', '2016-05-25 00:51:03', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "items" ("name", "img", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2016-05-25 00:51:03', '2016-05-25 00:51:03', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "line_items"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "line_items" ("item_id", "inventory_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:51:03', '2016-05-25 00:51:03', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "line_items" ("item_id", "inventory_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:51:03', '2016-05-25 00:51:03', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "objective_images"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "objective_images" ("lesson", "statement", "aimg", "bimg", "cimg", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:51:03', '2016-05-25 00:51:03', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "objective_images" ("lesson", "statement", "aimg", "bimg", "cimg", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:51:03', '2016-05-25 00:51:03', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "badges"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "badges" ("issuer_url", "issuer_organization", "name", "description", "img_url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:51:03', '2016-05-25 00:51:03', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "badges" ("issuer_url", "issuer_organization", "name", "description", "img_url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:51:03', '2016-05-25 00:51:03', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "questions"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "questions" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:51:03', '2016-05-25 00:51:03', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "questions" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:51:03', '2016-05-25 00:51:03', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "objective_textuals"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "objective_textuals" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:51:03', '2016-05-25 00:51:03', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "objective_textuals" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:51:03', '2016-05-25 00:51:03', 298486374)[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "characters"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "characters" ("name", "xp", "gold", "hair", "skin", "shirt", "pants", "created_at", "updated_at", "id") VALUES ('MyString', 1, 1, 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:51:03', '2016-05-25 00:51:03', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "characters" ("name", "xp", "gold", "hair", "skin", "shirt", "pants", "created_at", "updated_at", "id") VALUES ('MyString', 1, 1, 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:51:03', '2016-05-25 00:51:03', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "drag_drops"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "drag_drops" ("lesson", "statement", "a", "b", "c", "d", "atitle", "btitle", "ctitle", "dtitle", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:51:03', '2016-05-25 00:51:03', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "drag_drops" ("lesson", "statement", "a", "b", "c", "d", "atitle", "btitle", "ctitle", "dtitle", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:51:03', '2016-05-25 00:51:03', 298486374)[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('julian', 'julian@eu.com.br', '2016-05-25 00:51:03', '2016-05-25 00:51:03', 980190962)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "inventories"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "inventories" ("user_id", "created_at", "updated_at", "id") VALUES (1, '2016-05-25 00:51:03', '2016-05-25 00:51:03', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "inventories" ("user_id", "created_at", "updated_at", "id") VALUES (2, '2016-05-25 00:51:03', '2016-05-25 00:51:03', 298486374)
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (9.8ms)[0m  ALTER TABLE "inventories" ENABLE TRIGGER ALL;ALTER TABLE "drag_drops" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "lessons" ENABLE TRIGGER ALL;ALTER TABLE "badges" ENABLE TRIGGER ALL;ALTER TABLE "objective_images" ENABLE TRIGGER ALL;ALTER TABLE "objective_textuals" ENABLE TRIGGER ALL;ALTER TABLE "questions" ENABLE TRIGGER ALL;ALTER TABLE "subjective_textuals" ENABLE TRIGGER ALL;ALTER TABLE "characters" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "done_lessons" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "line_badges" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------------------
+CharacterTest: test_should_not_save_character_without_name
+----------------------------------------------------------
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (18.0ms)[0m  ALTER TABLE "inventories" DISABLE TRIGGER ALL;ALTER TABLE "drag_drops" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "lessons" DISABLE TRIGGER ALL;ALTER TABLE "badges" DISABLE TRIGGER ALL;ALTER TABLE "objective_images" DISABLE TRIGGER ALL;ALTER TABLE "objective_textuals" DISABLE TRIGGER ALL;ALTER TABLE "questions" DISABLE TRIGGER ALL;ALTER TABLE "subjective_textuals" DISABLE TRIGGER ALL;ALTER TABLE "characters" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "done_lessons" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "line_badges" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "line_badges"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "line_badges" ("badge_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:53:15', '2016-05-25 00:53:15', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "line_badges" ("badge_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:53:15', '2016-05-25 00:53:15', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "done_lessons"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "done_lessons" ("lesson_id", "character_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:53:15', '2016-05-25 00:53:15', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "done_lessons" ("lesson_id", "character_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:53:15', '2016-05-25 00:53:15', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "lessons"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "lessons" ("url", "subject", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-05-25 00:53:15', '2016-05-25 00:53:15', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "lessons" ("url", "subject", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-05-25 00:53:15', '2016-05-25 00:53:15', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "subjective_textuals"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "subjective_textuals" ("lesson", "statement", "answer", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2016-05-25 00:53:15', '2016-05-25 00:53:15', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "subjective_textuals" ("lesson", "statement", "answer", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2016-05-25 00:53:15', '2016-05-25 00:53:15', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "items"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "items" ("name", "img", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2016-05-25 00:53:15', '2016-05-25 00:53:15', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "items" ("name", "img", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2016-05-25 00:53:15', '2016-05-25 00:53:15', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "line_items"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "line_items" ("item_id", "inventory_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:53:15', '2016-05-25 00:53:15', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "line_items" ("item_id", "inventory_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-05-25 00:53:15', '2016-05-25 00:53:15', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "objective_images"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "objective_images" ("lesson", "statement", "aimg", "bimg", "cimg", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:53:15', '2016-05-25 00:53:15', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "objective_images" ("lesson", "statement", "aimg", "bimg", "cimg", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:53:15', '2016-05-25 00:53:15', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "badges"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "badges" ("issuer_url", "issuer_organization", "name", "description", "img_url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:53:15', '2016-05-25 00:53:15', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "badges" ("issuer_url", "issuer_organization", "name", "description", "img_url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:53:15', '2016-05-25 00:53:15', 298486374)[0m
+  [1m[35mFixture Delete (1.3ms)[0m  DELETE FROM "questions"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "questions" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:53:15', '2016-05-25 00:53:15', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "questions" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:53:15', '2016-05-25 00:53:15', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "objective_textuals"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "objective_textuals" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:53:15', '2016-05-25 00:53:15', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "objective_textuals" ("lesson", "statement", "a", "b", "c", "d", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:53:15', '2016-05-25 00:53:15', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "characters"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "characters" ("name", "xp", "gold", "hair", "skin", "shirt", "pants", "created_at", "updated_at", "id") VALUES ('MyString', 1, 1, 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:53:15', '2016-05-25 00:53:15', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "characters" ("name", "xp", "gold", "hair", "skin", "shirt", "pants", "created_at", "updated_at", "id") VALUES ('MyString', 1, 1, 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:53:15', '2016-05-25 00:53:15', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "drag_drops"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "drag_drops" ("lesson", "statement", "a", "b", "c", "d", "atitle", "btitle", "ctitle", "dtitle", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:53:15', '2016-05-25 00:53:15', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "drag_drops" ("lesson", "statement", "a", "b", "c", "d", "atitle", "btitle", "ctitle", "dtitle", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2016-05-25 00:53:15', '2016-05-25 00:53:15', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('julian', 'julian@eu.com.br', '2016-05-25 00:53:15', '2016-05-25 00:53:15', 980190962)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "inventories"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "inventories" ("user_id", "created_at", "updated_at", "id") VALUES (1, '2016-05-25 00:53:15', '2016-05-25 00:53:15', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "inventories" ("user_id", "created_at", "updated_at", "id") VALUES (2, '2016-05-25 00:53:15', '2016-05-25 00:53:15', 298486374)
+  [1m[36m (12.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (9.7ms)[0m  ALTER TABLE "inventories" ENABLE TRIGGER ALL;ALTER TABLE "drag_drops" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "lessons" ENABLE TRIGGER ALL;ALTER TABLE "badges" ENABLE TRIGGER ALL;ALTER TABLE "objective_images" ENABLE TRIGGER ALL;ALTER TABLE "objective_textuals" ENABLE TRIGGER ALL;ALTER TABLE "questions" ENABLE TRIGGER ALL;ALTER TABLE "subjective_textuals" ENABLE TRIGGER ALL;ALTER TABLE "characters" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "done_lessons" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "line_badges" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+-------------------------------------------------------
+CharactersControllerTest: test_should_destroy_character
+-------------------------------------------------------
+  [1m[35mCharacter Load (0.4ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "characters"[0m
+Processing by CharactersController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+CharactersControllerTest: test_should_create_character
+------------------------------------------------------
+  [1m[35mCharacter Load (0.3ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "characters"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------------
+CharactersControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by CharactersController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------------
+CharactersControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[36mCharacter Load (0.3ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by CharactersController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+CharactersControllerTest: test_should_show_character
+----------------------------------------------------
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------------
+CharactersControllerTest: test_should_update_character
+------------------------------------------------------
+  [1m[36mCharacter Load (0.3ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------
+CharactersControllerTest: test_should_get_edit
+----------------------------------------------
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by CharactersController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m

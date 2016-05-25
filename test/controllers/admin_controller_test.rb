@@ -1,4 +1,5 @@
 require 'test_helper'
+include Devise::Test::ControllerHelpers
 
 class AdminControllerTest < ActionController::TestCase
   test "should get index" do
