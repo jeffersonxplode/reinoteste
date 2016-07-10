@@ -1,17 +1,14 @@
 Rails.application.routes.draw do
 
-  
-  
-
   resources :objective_images
   resources :drag_drops
   resources :subjective_textuals
   resources :objective_textuals
   resources :line_badges do
-    collection do 
+    collection do
       post :badge_wall_share
     end
-  end  
+  end
 
   resources :badges
   resources :done_lessons
@@ -30,9 +27,15 @@ Rails.application.routes.draw do
   end
 
 
+  namespace :api, defaults: {format: 'json'} do
+    namespace :v1 do
+      resources :questions
+    end
+  end
+
   resources :lessons
   resources :store
-  
+
   get 'main/index'
 
   get 'quiz/index'
