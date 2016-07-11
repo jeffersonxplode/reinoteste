@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   resources :badges
   resources :done_lessons
   get 'admin/index'
+  get 'admin/new_token'
+  get 'admin/delete_token'
 
   resources :line_items
   resources :inventories
