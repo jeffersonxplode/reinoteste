@@ -1,0 +1,25 @@
+<!-- Questões-->
+
+<div class="panel-default">
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <%= @question.statement %>
+    </div>
+    <div class="panel-body">
+      <div class="input-group">
+        <% @alternativas = [@question.a, @question.b, @question.c, @question.d] %>
+        <% @alternativas.shuffle! %>
+
+        <%= radio_button_tag "answer", @alternativas[0] %><%= @alternativas[0] %><br>
+        <%= radio_button_tag "answer", @alternativas[1] %><%= @alternativas[1] %><br>
+        <%= radio_button_tag "answer", @alternativas[2] %><%= @alternativas[2] %><br>
+        <%= radio_button_tag "answer", @alternativas[3] %><%= @alternativas[3] %><br>
+        <%= hidden_field_tag "statement", @question.statement %>
+      </div>
+    </div>
+  </div>
+</div>
+<% if @id < 5 %>
+    <%= link_to :Próxima, "Proxima/" + @id.to_s, remote: true %>
+<% end %>
+<!-- Questões-->

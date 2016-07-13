@@ -25,31 +25,12 @@
 
           <p>Questões:</p>
 
-          <%= form_tag({ :controller => "quiz", :action => "answer"} ) do |f|%>    
-                <!-- Questões-->
-              <% @questions.each_with_index do |q, i| %>
-                <div class="panel-default">
-                  <div class="panel panel-info">
-                    <div class="panel-heading"><%= q.statement %></div>
-                    <div class="panel-body">
-                      <div class="input-group">                   
-                        <% @alternativas = [q.a, q.b, q.c, q.d] %>
-                        <% @alternativas.shuffle! %>
+          <%= form_tag({ :controller => "quiz", :action => "answer"} )%>
 
-                        <%= radio_button_tag "answer#{i+1}", @alternativas[0] %><%= @alternativas[0] %><br>
-                        <%= radio_button_tag "answer#{i+1}", @alternativas[1] %><%= @alternativas[1] %><br>
-                        <%= radio_button_tag "answer#{i+1}", @alternativas[2] %><%= @alternativas[2] %><br>
-                        <%= radio_button_tag "answer#{i+1}", @alternativas[3] %><%= @alternativas[3] %><br>
-                        <%= hidden_field_tag "statement#{i+1}", q.statement %>
 
-                      
-                      </div>                
-                    </div>
-                  </div>
-                </div>
-                <!-- Questões-->
-          <% end %>   
-                 
+              <div class="quiz">
+                <%= render :partial => 'quiz'%>
+              </div>
 
           <!--Botão pronto-->
           <div class="text-center">
@@ -58,7 +39,8 @@
               <!--<button type="button" class="btn btn-success btn-lg" id="responder">Terminei</button>-->
             </div>
           </div>
-          <% end %>             
+
+
           <!--Botão pronto-->
 
         </div>

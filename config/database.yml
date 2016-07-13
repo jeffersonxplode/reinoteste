@@ -8,22 +8,20 @@ default: &default
   adapter: postgresql
   pool: 5
   host: localhost
+  database: reinodocodigo_dev
+  username: reinodocodigo
+  password: 12345678
+
 
 development:
   <<: *default
-  database: reinoherokudb
   host: localhost
-  username: postgres
-  password: postgres
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: reinoherokudbtest
   host: localhost
-  username: postgres
-  password: postgres
 
 production:
   <<: *default

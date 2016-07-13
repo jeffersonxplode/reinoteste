@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   end
 
 
+
   namespace :api, defaults: {format: 'json'} do
     namespace :v1 do
       resources :questions
@@ -45,6 +46,8 @@ Rails.application.routes.draw do
   get 'quiz/gerar_quiz'
 
   get 'quiz/catalog'
+
+  get 'quiz/Proxima/:id' => 'quiz#ProxPergunta'
 
   resources :quiz do
     collection do
